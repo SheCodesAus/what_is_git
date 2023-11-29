@@ -53,11 +53,14 @@ Now enter this command:
 ls
 ```
 
-This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. If you don't see one, create it now with:
+This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-```bash
-mkdir she_codes
-```
+> [!IMPORTANT]  
+> If you don't see one, you can create it now with:
+>
+> ```bash
+> mkdir she_codes
+> ```
 
 #### 1.1.3 - Navigate Into Your Classwork Directory
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
@@ -74,26 +77,34 @@ mkdir git_and_github && cd $_
 ```
 
 > [!Note]  
-> `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell.
+> `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell. 
+> 
+> So this command says: "create a directory called `git_and_github`, and then immediately change directory into that same folder".
 
-Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project.
+Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project. Jump to your classword directory, and then make a new folder to hold the code for that project.
 
 ### 1.2 - Initialisation
 
-We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. To do that, you can run the following command:
+We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. 
+
+This is another good thing to do each time we start work on something new.
+
+To initialise the repo, you can run the following command:
 
 ```bash
 git init
 ```
 
-This "initialises" the folder as a Git repo. You can check that it worked by listing the contents of the folder with this command:
+This "initialises" the folder as a Git repo. 
+
+You can check that it worked by listing the contents of the current directory with this command:
 
 ```bash
 ls -A
 ```
 
 > [!NOTE]  
-> The `-a` there is a "flag". It adds optional extra functionality to the command. In this case, we are asking the shell to list ALL of the contents of the current directory, including hidden files and folders.
+> The `-A` there is a "flag". It adds optional extra functionality to the command. In this case, we are asking the shell to list ALL of the contents of the current directory, including hidden files and folders.
 
 Here's what you should see:
 
@@ -101,8 +112,30 @@ Here's what you should see:
 
 Hidden files and directories have names that begin with a dot. We can see that Git has created a hidden directory for us called `.git/`. This directory stores all the files that Git uses for keeping track of changes to our files. We don't need to open it right now - Git will handle it for us.
 
+> [!IMPORTANT]  
+> We **won't** be working *inside* the `.git/` directory. It is just there to let Git do its thing. We will be creating all of the files and folders we need inside the `git_and_github/` directory, and `.git/` will just sit there alongside them. Watching. Waiting. 👀👀👀
+
 > [!WARNING]  
-> Try to avoid a situation where one Git repo gets created *inside another one*. This can cause some very weird version control issues. In general, you want to have one folder per project, and avoid putting one project inside another.
+> Try to avoid a situation where one Git repo gets created *inside another one*. This can cause some very weird and confusing problems. 
+> 
+> In general, you want to keep all the files for each project inside one "umbrella" directory, and make that umbrella directory your git repo. When you start a new project, make a new umbrella directory for it, next to your other projects. Like this:
+>
+> ```
+> she_codes/
+> ├─ html_intro/
+> │  ├─ index.html
+> │  ├─ styles.css
+> |
+> ├─ git_and_github/        <--- This is a git repo!
+> │  ├─ README.md
+> │  ├─ .git/
+> |
+> ├─ profile_site_project/  <--- This is a git repo!
+> │  ├─ index.html
+> │  ├─ styles.css
+> │  ├─ README.md
+> │  ├─ .git/
+> ```
 
 ### 1.3 - The Initial Commit
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
@@ -115,6 +148,9 @@ Let's create a blank file to be in our initial commit. Run the following command
 ```bash
 touch README.md
 ```
+
+> [!INFO]  
+> The `touch` command creates a new file with the name supplied.
 
 Now open the current directory in VS Code like so:
 
@@ -191,7 +227,7 @@ Don't forget to save the file!
 > The code we have added is in a language called "Markdown". It's quite extremely useful, and we will see it again in this course. Luckily, Markdown is so close to normal English that we don't need to be familiar with it to understand what's being said here.
 
 #### 1.4.1 - Check The Status Again
-Let's check the status again!
+Let's check the status again! 
 
 ```bash
 git status
@@ -230,7 +266,7 @@ git commit -m "added some useful hints on how to use Git to the README"
 ### 1.5 - Taking Stock
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
-![Three commits represented as a graph.](./img/video_files/6_graph_representation.drawio.png)
+![Three commits represented as a graph.](./img/what_is_git_video/7_graph_head.drawio.png)
 
 We can't get quite such a pretty representation in the terminal, but we can get close. Try running this command:
 
@@ -242,6 +278,11 @@ Here's what I see:
 
 ![The Git graph, represented in the command line. Two commits are represented by asterisks, tagged with details describing them, and linked by a dotted line.](./img/git_log.png)
 
-This is pretty much what we had above - it has just been rotated by 90 degrees, and rendered as text-art. The initial commit is at the bottom, and our second commit is above it. Each commit is represented by an asterisk. Can you see the similarity?
+This is pretty much what we had above - it has just been rotated by 90 degrees, and rendered as text-art. The initial commit is at the bottom, and our second commit is above it. Each commit is represented by an asterisk. 
+
+Of course, the working tree isn't represented in our command line graph. But the working tree is just "the current state of our code", and we can see that by looking at the files in VS Code!
 
 Not bad!
+
+> [!NOTE]  
+> In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you'd like to see a demo of that (plus some other helpful techniques), [take a look at our video on useful Git techniques]().
