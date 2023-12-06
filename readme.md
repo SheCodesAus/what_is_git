@@ -188,7 +188,7 @@ Let's create a blank file to be in our initial commit. Run the following command
 touch README.md
 ```
 
-> [!INFO]  
+> [!NOTE]  
 > The `touch` command creates a new file with the name supplied.
 
 Now open the current directory in VS Code like so:
