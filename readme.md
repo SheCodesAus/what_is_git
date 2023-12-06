@@ -45,10 +45,13 @@ This might sound a bit abstract, so let's work through an example together.
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
 ---
-<details><summary>
+<details>
+
+<summary>
 
 #### 1.1.1 - Go To Your Home Directory
 </summary>
+
 
 Open the terminal, and issue the following command:
 
@@ -64,10 +67,16 @@ This command navigates you to your "home" directory. That's the directory set as
 </details>
 
 ---
-<details><summary>
+
+<details>
+
+<summary>
 
 #### 1.1.2 - Make Sure You Have A Directory For Your Class Work
+
 </summary>
+
+
 Now enter this command:
 
 ```bash
@@ -76,8 +85,6 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
----
-
 > [!IMPORTANT]  
 > If you don't see one, you can create it now with:
 >
@@ -85,15 +92,19 @@ This will print the contents of your home directory on the screen. You should se
 > mkdir she_codes
 > ```
 
----
-
 </details>
 
 ---
-<details><summary>
+
+<details>
+
+<summary>
 
 #### 1.1.3 - Navigate Into Your Classwork Directory
+
 </summary>
+
+
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
 
 ```bash
@@ -103,11 +114,16 @@ cd she_codes
 </details>
 
 ---
-<details><summary>
 
+<details>
+
+<summary>
 
 #### 1.1.4 - Create A Directory For Today's Work
+
 </summary>
+
+
 We need a directory to hold our work for this lesson. You can create one and simultaneously navigate into it by entering the following command:
 
 ```bash
