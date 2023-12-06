@@ -1,42 +1,40 @@
 
 
-# <img src=./img/git_icon.png width="100"/> Git and Github <img src=./img/github_icon.png width="100"/>
+<h1><img src=./img/git_icon.png width="100"/> Git and Github <img src=./img/github_icon.png width="100"/></h1>
 This lesson walks you through the basics of what Git is and how to use it. Once we've covered that, we will take a look at Github as well!
 
-- [ Git and Github ](#-git-and-github-)
-  - [1.0 - Git](#10---git)
-    - [1.1 - Some Housekeeping](#11---some-housekeeping)
-      - [1.1.1 - Go To Your Home Directory](#111---go-to-your-home-directory)
-      - [1.1.2 - Make Sure You Have A Classwork Directory](#112---make-sure-you-have-a-classwork-directory)
-      - [1.1.3 - Navigate Into Your Classwork Directory](#113---navigate-into-your-classwork-directory)
-      - [1.1.4 - Create A Directory For Today's Work](#114---create-a-directory-for-todays-work)
-    - [1.2 - Initialisation](#12---initialisation)
-    - [1.3 - The Initial Commit](#13---the-initial-commit)
-      - [1.3.1 - Create A Blank File](#131---create-a-blank-file)
-      - [1.3.2 - Check The Status](#132---check-the-status)
-      - [1.3.2 - Add The New File To The "Staging Area"](#132---add-the-new-file-to-the-staging-area)
-      - [1.3.3 - Make The Commit](#133---make-the-commit)
-    - [1.4 - A Second Commit](#14---a-second-commit)
-      - [1.4.1 - Adding Some Code](#141---adding-some-code)
-      - [1.4.1 - Check The Status Again](#141---check-the-status-again)
-      - [1.4.2 - Add To Staging Again](#142---add-to-staging-again)
-      - [1.4.3 - Make That Commit!](#143---make-that-commit)
-    - [1.5 - Taking Stock](#15---taking-stock)
-    - [1.6 - Create A Feature Branch](#16---create-a-feature-branch)
-      - [1.6.1 - Create The New Branch](#161---create-the-new-branch)
-      - [1.6.2 - Take A Look At The Current Branches](#162---take-a-look-at-the-current-branches)
-      - [1.6.3 - Check Out The New Branch](#163---check-out-the-new-branch)
-    - [1.7 - Develop A Feature](#17---develop-a-feature)
-      - [1.7.1 - Write The Code](#171---write-the-code)
-      - [1.7.2 - Stage The Changes](#172---stage-the-changes)
-      - [1.7.3 - Make The Commit](#173---make-the-commit)
-    - [1.8 - Merge The Feature Branch Into Main](#18---merge-the-feature-branch-into-main)
-      - [1.8.1 - Check Out The Main Branch](#181---check-out-the-main-branch)
-      - [1.8.2 - Merge Away!](#182---merge-away)
-      - [1.8.3 - Take A Look At The Graph](#183---take-a-look-at-the-graph)
+- [1 - Git](#1---git)
+  - [1.1 - Some Housekeeping](#11---some-housekeeping)
+    - [1.1.1 - Go To Your Home Directory](#111---go-to-your-home-directory)
+    - [1.1.2 - Make Sure You Have A Directory For Your Class Work](#112---make-sure-you-have-a-directory-for-your-class-work)
+    - [1.1.3 - Navigate Into Your Classwork Directory](#113---navigate-into-your-classwork-directory)
+    - [1.1.4 - Create A Directory For Today's Work](#114---create-a-directory-for-todays-work)
+  - [1.2 - Initialisation](#12---initialisation)
+  - [1.3 - The Initial Commit](#13---the-initial-commit)
+    - [1.3.1 - Create A Blank File](#131---create-a-blank-file)
+    - [1.3.2 - Check The Status](#132---check-the-status)
+    - [1.3.3 - Add The New File To The "Staging Area"](#133---add-the-new-file-to-the-staging-area)
+    - [1.3.4 - Make The Commit](#134---make-the-commit)
+  - [1.4 - A Second Commit](#14---a-second-commit)
+    - [1.4.1 - Adding Some Code](#141---adding-some-code)
+    - [1.4.1 - Check The Status Again](#141---check-the-status-again)
+    - [1.4.2 - Add To Staging Again](#142---add-to-staging-again)
+    - [1.4.3 - Make That Commit!](#143---make-that-commit)
+  - [1.5 - Taking Stock](#15---taking-stock)
+  - [1.6 - Create A Feature Branch](#16---create-a-feature-branch)
+    - [1.6.1 - Create The New Branch](#161---create-the-new-branch)
+    - [1.6.2 - Take A Look At The Current Branches](#162---take-a-look-at-the-current-branches)
+    - [1.6.3 - Check Out The New Branch](#163---check-out-the-new-branch)
+  - [1.7 - Develop A Feature](#17---develop-a-feature)
+    - [1.7.1 - Write The Code](#171---write-the-code)
+    - [1.7.2 - Stage The Changes](#172---stage-the-changes)
+    - [1.7.3 - Make The Commit](#173---make-the-commit)
+  - [1.8 - Merge The Feature Branch Into Main](#18---merge-the-feature-branch-into-main)
+    - [1.8.1 - Check Out The Main Branch](#181---check-out-the-main-branch)
+    - [1.8.2 - Merge Away!](#182---merge-away)
 
 
-## 1.0 - Git
+## 1 - Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
 
 Git lets us safely try out modifications to code, without losing the version that works. It also allows us to "stitch together" all the best bits from various versions of our software. 
@@ -46,7 +44,12 @@ This might sound a bit abstract, so let's work through an example together.
 ### 1.1 - Some Housekeeping
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
+---
+<details><summary>
+
 #### 1.1.1 - Go To Your Home Directory
+</summary>
+
 Open the terminal, and issue the following command:
 
 ```bash
@@ -58,7 +61,13 @@ cd ~
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
 
-#### 1.1.2 - Make Sure You Have A Classwork Directory
+</details>
+
+---
+<details><summary>
+
+#### 1.1.2 - Make Sure You Have A Directory For Your Class Work
+</summary>
 Now enter this command:
 
 ```bash
@@ -74,14 +83,27 @@ This will print the contents of your home directory on the screen. You should se
 > mkdir she_codes
 > ```
 
+</details>
+
+---
+<details><summary>
+
 #### 1.1.3 - Navigate Into Your Classwork Directory
+</summary>
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
 
 ```bash
 cd she_codes
 ```
 
+</details>
+
+---
+<details><summary>
+
+
 #### 1.1.4 - Create A Directory For Today's Work
+</summary>
 We need a directory to hold our work for this lesson. You can create one and simultaneously navigate into it by entering the following command:
 
 ```bash
@@ -103,6 +125,10 @@ You should now be here:
 ```
 
 Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project. Jump to your classword directory, and then make a new folder to hold the code for that project.
+
+</details>
+
+---
 
 ### 1.2 - Initialisation
 
@@ -158,6 +184,8 @@ Hidden files and directories have names that begin with a dot. We can see that G
 > │  ├─ .git/
 > ```
 
+---
+
 ### 1.3 - The Initial Commit
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
@@ -196,7 +224,7 @@ Here's what you should see:
 
 So, Git can see that we have created a new file in the repository, but it isn't yet keeping track of those changes. If we want to add them to a commit, we need to put them in Git's "staging area". This is a holding zone for the changes we add to our commits.
 
-#### 1.3.2 - Add The New File To The "Staging Area"
+#### 1.3.3 - Add The New File To The "Staging Area"
 To stage changes to a file, we use the `git add` command. Give it a go:
 
 ```bash
@@ -213,7 +241,7 @@ git status
 
 Looking good!
 
-#### 1.3.3 - Make The Commit
+#### 1.3.4 - Make The Commit
 We are now ready to make our first commit! Here's the command:
 
 ```bash
@@ -228,6 +256,8 @@ Here's the result of running that command:
 ![The result of creating our first commit.](./img/initial_commit.png)
 
 Nice! We have a blank canvas to build on now. 
+
+---
 
 ### 1.4 - A Second Commit
 #### 1.4.1 - Adding Some Code
@@ -284,6 +314,8 @@ git commit -m "added some useful hints on how to use Git to the README"
 
 ![The results of our second Git commit. This time the commit notes that 6 insertions were made.](./img/second_commit.png)
 
+---
+
 ### 1.5 - Taking Stock
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
@@ -307,6 +339,8 @@ Not bad!
 
 > [!NOTE]  
 > In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you'd like to see a demo of that (plus some other helpful techniques), [take a look at our video on useful Git techniques]().
+
+---
 
 ### 1.6 - Create A Feature Branch
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
@@ -345,8 +379,9 @@ When we swap to a different branch in Git, we call it "checking out" the branch.
 git checkout my_new_branch
 ```
 
-### 1.7 - Develop A Feature
+---
 
+### 1.7 - Develop A Feature
 #### 1.7.1 - Write The Code
 Hope back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
 
@@ -390,6 +425,8 @@ The state of our branches now looks something like this:
 > We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
+
+---
 
 ### 1.8 - Merge The Feature Branch Into Main
 Go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
