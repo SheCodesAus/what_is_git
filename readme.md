@@ -22,6 +22,18 @@ This lesson walks you through the basics of what Git is and how to use it. Once 
       - [1.4.2 - Add To Staging Again](#142---add-to-staging-again)
       - [1.4.3 - Make That Commit!](#143---make-that-commit)
     - [1.5 - Taking Stock](#15---taking-stock)
+    - [1.6 - Create A Feature Branch](#16---create-a-feature-branch)
+      - [1.6.1 - Create The New Branch](#161---create-the-new-branch)
+      - [1.6.2 - Take A Look At The Current Branches](#162---take-a-look-at-the-current-branches)
+      - [1.6.3 - Check Out The New Branch](#163---check-out-the-new-branch)
+    - [1.7 - Develop A Feature](#17---develop-a-feature)
+      - [1.7.1 - Write The Code](#171---write-the-code)
+      - [1.7.2 - Stage The Changes](#172---stage-the-changes)
+      - [1.7.3 - Make The Commit](#173---make-the-commit)
+    - [1.8 - Merge The Feature Branch Into Main](#18---merge-the-feature-branch-into-main)
+      - [1.8.1 - Check Out The Main Branch](#181---check-out-the-main-branch)
+      - [1.8.2 - Merge Away!](#182---merge-away)
+      - [1.8.3 - Take A Look At The Graph](#183---take-a-look-at-the-graph)
 
 
 ## 1.0 - Git
@@ -80,6 +92,15 @@ mkdir git_and_github && cd $_
 > `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell. 
 > 
 > So this command says: "create a directory called `git_and_github`, and then immediately change directory into that same folder".
+
+You should now be here:
+```
+~/
+|
+├─ she_codes/
+| |
+| ├─git_and_github/   <--- You are here
+```
 
 Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project. Jump to your classword directory, and then make a new folder to hold the code for that project.
 
@@ -215,10 +236,10 @@ Let's make a real change now. Go back to VS Code, add some text to `README.md`, 
 ```md
 # Git Demonstration
 Here are some useful commands for Git:
-- `git init`: initialises a directory as a Git repo
-- `git status`: checks the status of a Git repo
-- `git add some_file_name`: adds `some_file_name` to staging
-- `git commit -m "some message"`: creates a Git commit with "some message" as the commit message 
+* `git init`: initialises a directory as a Git repo
+* `git status`: checks the status of a Git repo
+* `git add some_file_name`: adds `some_file_name` to staging
+* `git commit -m "some message"`: creates a Git commit with "some message" as the commit message 
 ```
 
 Don't forget to save the file!
@@ -286,3 +307,110 @@ Not bad!
 
 > [!NOTE]  
 > In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you'd like to see a demo of that (plus some other helpful techniques), [take a look at our video on useful Git techniques]().
+
+### 1.6 - Create A Feature Branch
+We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
+
+We've only been operating on the main branch so far. Let's create a new branch to hold our new changes. Once we are happy with them, we can merge them in.
+
+A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
+
+#### 1.6.1 - Create The New Branch
+Run the following command in the terminal:
+
+```bash
+git branch my_new_branch
+```
+
+> [!NOTE]  
+> Here `my_new_branch` is the name we are giving to our new branch!
+
+#### 1.6.2 - Take A Look At The Current Branches
+Just so we are orientated, let's see what branches we have right now. To do this, you can run this command:
+
+```bash
+git branch
+```
+
+Since we didn't supply the name of a new branch, Git will just list all the currently available branches for us.
+
+![A list of current branches in the terminal. There are two: `main`, and `my_new_branch`.](./img/current_branches.png)
+
+The asterisk here indicates that we are currently operating on the `main` branch. If we want to work on our new feature in the other branch, we'll need to change that...
+
+#### 1.6.3 - Check Out The New Branch
+When we swap to a different branch in Git, we call it "checking out" the branch. We can do it with the following command:
+
+```bash
+git checkout my_new_branch
+```
+
+### 1.7 - Develop A Feature
+
+#### 1.7.1 - Write The Code
+Hope back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
+
+Let's change that. Here's a modification to make to the file:
+
+```diff
+# Git Demonstration
+Here are some useful commands for Git:
+* `git init`: initialises a directory as a Git repo
+* `git status`: checks the status of a Git repo
+* `git add some_file_name`: adds `some_file_name` to staging
+* `git commit -m "some message"`: creates a Git commit with "some message" as the commit message 
+
++ Some more commands:
++ * `git log --graph`: displays a graph of the commits in your repo
++ * `git branch`: lists the current branches in your repo
++ * `git branch some_branch_name`: creates a new branch called "some_branch_name"
++ * `git checkout some_branch_name`: moves the HEAD to the most recent commit on the branch called "some_branch_name"
+```
+
+#### 1.7.2 - Stage The Changes
+You can use `git status` to check what files have changed if you'd like. That's a good idea when you've made complex changes or it has been a while since your last commit.
+
+In this case, though, we know exactly what has changed, and there's only one file we need to stage. So let's run that command:
+
+```bash
+git add README.md
+```
+
+#### 1.7.3 - Make The Commit
+This should be getting familiar! Here's that command again, this time with a different commit message:
+
+```bash
+git commit -m "added some extra examples of git commands to the readme"
+```
+
+The state of our branches now looks something like this:
+
+![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
+
+> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
+>
+> You can still take a look at the Git graph, it'll just be a bit less helpful.
+
+### 1.8 - Merge The Feature Branch Into Main
+Go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
+
+#### 1.8.1 - Check Out The Main Branch
+To start with, we have to jump back to the `main` branch, since we want to merge our changes into it. 
+
+You can do that with this command:
+
+```bash
+git checkout main
+```
+
+#### 1.8.2 - Merge Away!
+Ok, time to merge. Here's the command for that:
+
+```bash
+git merge my_new_branch
+```
+
+Here's what you should see:
+
+![The result of the merge - the readout says "1 file changed, 7 insertions, 1 deletion".](./img/merge.png)
+
