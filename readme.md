@@ -46,18 +46,7 @@ If you followed the instructions in our first ever lesson to the letter, you wil
 
 ---
 
-
-<details>
-
-
-<summary>
-
-
 #### 1.1.1 - Go To Your Home Directory
-
-
-</summary>
-
 
 Open the terminal, and issue the following command:
 
@@ -65,24 +54,14 @@ Open the terminal, and issue the following command:
 cd ~
 ```
 
-> [!Note]  
+> [!NOTE]  
 > That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
 
-
-</details>
-
 ---
 
-<details>
-
-<summary>
-
 #### 1.1.2 - Make Sure You Have A Directory For Your Class Work
-
-</summary>
-
 
 Now enter this command:
 
@@ -99,18 +78,9 @@ This will print the contents of your home directory on the screen. You should se
 > mkdir she_codes
 > ```
 
-</details>
-
 ---
 
-<details>
-
-<summary>
-
 #### 1.1.3 - Navigate Into Your Classwork Directory
-
-</summary>
-
 
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
 
@@ -118,18 +88,9 @@ Now that we're certain that your `she_codes` directory exists, navigate into it 
 cd she_codes
 ```
 
-</details>
-
 ---
 
-<details>
-
-<summary>
-
 #### 1.1.4 - Create A Directory For Today's Work
-
-</summary>
-
 
 We need a directory to hold our work for this lesson. You can create one and simultaneously navigate into it by entering the following command:
 
@@ -152,8 +113,6 @@ You should now be here:
 ```
 
 Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project. Jump to your classword directory, and then make a new folder to hold the code for that project.
-
-</details>
 
 ---
 
