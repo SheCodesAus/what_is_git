@@ -56,7 +56,8 @@ Open the terminal, and issue the following command:
 cd ~
 ```
 
-> [!Note] That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
+> [!Note]  
+> That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
 
@@ -75,7 +76,7 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-> **Note**    
+> [!IMPORTANT]  
 > If you don't see one, you can create it now with:
 >
 > ```bash
