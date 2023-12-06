@@ -76,12 +76,16 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
+---
+
 > [!IMPORTANT]  
 > If you don't see one, you can create it now with:
 >
 > ```bash
 > mkdir she_codes
 > ```
+
+---
 
 </details>
 
