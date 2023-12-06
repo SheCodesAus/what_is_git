@@ -45,11 +45,17 @@ This might sound a bit abstract, so let's work through an example together.
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
 ---
+
+
 <details>
+
 
 <summary>
 
+
 #### 1.1.1 - Go To Your Home Directory
+
+
 </summary>
 
 
@@ -63,6 +69,7 @@ cd ~
 > That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
+
 
 </details>
 
