@@ -150,7 +150,8 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 > [!WARNING]  
 > Try to avoid a situation where one Git repo gets created *inside another one*. This can cause some very weird and confusing problems. 
-> 
+>
+> **Correct Structure:**  
 > In general, you want to keep all the files for each project inside one "umbrella" directory, and make that umbrella directory your git repo. When you start a new project, make a new umbrella directory for it, next to your other projects. Like this:
 >
 > ```
@@ -172,10 +173,13 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 ---
 
+
 ### 1.3 - The Initial Commit
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
+
+---
 
 #### 1.3.1 - Create A Blank File
 Let's create a blank file to be in our initial commit. Run the following command:
@@ -197,6 +201,8 @@ Here's what you should see:
 
 ![A blank file called `README.md` in VS Code](./img/blank_file.png)
 
+---
+
 #### 1.3.2 - Check The Status
 We won't be adding any code yet - we'll let our initial commit just contain a blank file. Jump back into the terminal and run the following command:
 
@@ -209,6 +215,8 @@ Here's what you should see:
 ![The results of running `git status` in the terminal - `README.md` is marked as an untracked file.](./img/initial_status.png)
 
 So, Git can see that we have created a new file in the repository, but it isn't yet keeping track of those changes. If we want to add them to a commit, we need to put them in Git's "staging area". This is a holding zone for the changes we add to our commits.
+
+---
 
 #### 1.3.3 - Add The New File To The "Staging Area"
 To stage changes to a file, we use the `git add` command. Give it a go:
@@ -226,6 +234,8 @@ git status
 ![The results of running `git status` in the terminal - `README.md` is now marked as a change to be committed.](./img/second_status.png)
 
 Looking good!
+
+---
 
 #### 1.3.4 - Make The Commit
 We are now ready to make our first commit! Here's the command:
