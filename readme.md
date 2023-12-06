@@ -41,17 +41,6 @@ Git lets us safely try out modifications to code, without losing the version tha
 
 This might sound a bit abstract, so let's work through an example together.
 
-<details>
-
-> [!IMPORTANT]  
-> If you don't see one, you can create it now with:
->
-> ```bash
-> mkdir she_codes
-> ```
-
-</details>
-
 ### 1.1 - Some Housekeeping
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
@@ -87,7 +76,7 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-> [!IMPORTANT]  
+> **Note**    
 > If you don't see one, you can create it now with:
 >
 > ```bash
