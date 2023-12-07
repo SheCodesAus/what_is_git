@@ -51,6 +51,8 @@ Git lets us safely try out modifications to code, without losing the version tha
 
 This might sound a bit abstract, so let's work through an example together.
 
+---
+
 ### 1.1 🧹 Some Housekeeping 🧹
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
@@ -168,6 +170,8 @@ Ok, we are now ready to begin! What we just did is a good way to begin any class
 
 </details>
 
+---
+
 ### 1.2 - 🌄 Initialisation 🌄
 
 We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. 
@@ -251,8 +255,7 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 </details>
 
-
-
+---
 
 ### Step 1.3 🌱 The Initial Commit 🌱
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
@@ -377,6 +380,8 @@ Nice! We have a blank canvas to build on now.
 
 </details>
 
+---
+
 ### 1.4 🪴 A Second Commit 🪴
 Let's make a real change now!
 
@@ -486,6 +491,8 @@ git commit -m "added some useful hints on how to use Git to the README"
 
 </details>
 
+---
+
 ### 1.5 ⏳ A Pause To Take Stock ⏳
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
@@ -513,6 +520,8 @@ Not bad!
 ```diff
 - ^^Gonna need to make that video then too...
 ```
+
+---
 
 ### 1.6 🌵 Create A Feature Branch 🌵
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
@@ -590,6 +599,8 @@ git checkout my_new_branch
 ---
 
 </details>
+
+---
 
 ### 1.7 🛠️ Develop A Feature 🛠️
 We created this branch to introduce new code into the repo, so let's do it!
@@ -679,6 +690,7 @@ The state of our branches now looks something like this:
 
 </details>
 
+---
 
 ### 1.8 ⛙ Merge The Feature Branch Into Main ⛙
 It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
@@ -734,6 +746,8 @@ Here's what you should see:
 
 </details>
 
+---
+
 ### 1.9 ⏳ Pause Again ⏳
 
 Where are we now? What have we done so far?
@@ -751,5 +765,7 @@ Here's a diagram representing where we are at:
 This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge. And if someone else wants to contribute to your work, how can they send you their additions?
 
 For that we'll need something extra...
+
+---
 
 ## <img src=./img/github_icon.png width="100" /> Section 2: Github
