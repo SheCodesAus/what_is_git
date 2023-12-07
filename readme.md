@@ -2,11 +2,19 @@
 
 <img src=./img/logo.png />
 
-<h1><img src=./img/git_icon.png width="100" /> Git and Github <img src=./img/github_icon.png width="100" /></h1>
+<h1><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /></h1>
 
 </center>
 
-This lesson walks you through the basics of what Git is and how to use it. Once we've covered that, we will take a look at Github as well!
+Hopefully you've already taken a look at [our introductory video on Git and GitHub](). (If you haven't, have a watch after class!)
+
+This lesson is a practical introduction to using Git and GitHub. It will give you a chance to use the tools we outlined in the video. 
+
+Don't worry if you're still feeling confused by the end of class - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
+
+```diff
+- need to add a link to the video once it's finished
+```
 
 <h2>Table of Contents</h2>
 
@@ -38,11 +46,20 @@ This lesson walks you through the basics of what Git is and how to use it. Once 
     - [Step 1.7.1 📝 Write The Code 📝](#step-171--write-the-code-)
     - [Step 1.7.2 📥 Stage The Changes 📥](#step-172--stage-the-changes-)
     - [Step 1.7.3 💾 Make The Commit 💾](#step-173--make-the-commit-)
-  - [1.8 ⛙ Merge The Feature Branch Into Main ⛙](#18--merge-the-feature-branch-into-main-)
-    - [Step 1.8.1 ⬅️ Check Out The Main Branch ⬅️](#step-181-️-check-out-the-main-branch-️)
-    - [Step 1.8.2 ⛙ Merge Away! ⛙](#step-182--merge-away-)
-  - [1.9 ⏳ Pause Again ⏳](#19--pause-again-)
+  - [1.8 ⏳ Pause Again: What Did We Just Do? ⏳](#18--pause-again-what-did-we-just-do-)
+  - [1.9 ⛙ Merge The Feature Branch Into Main ⛙](#19--merge-the-feature-branch-into-main-)
+    - [Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️](#step-191-️-check-out-the-main-branch-️)
+    - [Step 1.9.2 ⛙ Merge Away! ⛙](#step-192--merge-away-)
+  - [1.10 ⏳ Pause Pt. 3: The Pausening ⏳](#110--pause-pt-3-the-pausening-)
 - [ Section 2: Github](#-section-2-github)
+  - [2.1 ⏫ Uploading A Repo ⏫](#21--uploading-a-repo-)
+    - [Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️](#step-211-️-create-a-repo-in-the-cloud-️)
+    - [Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋](#step-212--copy-the-address-for-your-cloud-repo-)
+    - [Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗](#step-213--link-your-local-repo-to-the-remote-)
+    - [Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️](#step-214-️-push-your-changes-to-the-remote-️)
+  - [2.2 ⏳ Pause: Did It Work? ⏳](#22--pause-did-it-work-)
+  - [2.3 🔄 Workflow Moving Forward 🔄](#23--workflow-moving-forward-)
+  - [2.3 ⏬ Downloading A Repo ⏬](#23--downloading-a-repo-)
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -634,6 +651,8 @@ Here are some useful commands for Git:
 + * `git checkout some_branch_name`: moves the HEAD to the most recent commit on the branch called "some_branch_name"
 ```
 
+Make sure you save your work!
+
 ---
 
 </details>
@@ -677,7 +696,17 @@ This should be getting familiar! Here's that command again, this time with a dif
 git commit -m "added some extra examples of git commands to the readme"
 ```
 
-The state of our branches now looks something like this:
+---
+
+</details>
+
+---
+
+### 1.8 ⏳ Pause Again: What Did We Just Do? ⏳
+
+We just branched off an "alternate timeline" from our main branch, and added a commit to it. That means that we have two possible states for our repository, and we can flip back and forth between them by swapping branches.
+
+The state of our repo now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
@@ -688,18 +717,14 @@ The state of our branches now looks something like this:
 
 ---
 
-</details>
-
----
-
-### 1.8 ⛙ Merge The Feature Branch Into Main ⛙
+### 1.9 ⛙ Merge The Feature Branch Into Main ⛙
 It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
 
 <details>
 
 <summary>
 
-#### Step 1.8.1 ⬅️ Check Out The Main Branch ⬅️
+#### Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️
 
 </summary>
 
@@ -724,7 +749,7 @@ git checkout main
 
 <summary>
 
-#### Step 1.8.2 ⛙ Merge Away! ⛙
+#### Step 1.9.2 ⛙ Merge Away! ⛙
 
 </summary>
 
@@ -748,7 +773,7 @@ Here's what you should see:
 
 ---
 
-### 1.9 ⏳ Pause Again ⏳
+### 1.10 ⏳ Pause Pt. 3: The Pausening ⏳
 
 Where are we now? What have we done so far?
 
@@ -760,12 +785,207 @@ Here's a diagram representing where we are at:
 
 ![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
 
-(As usual, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.)
+> :information_source: **NOTE** :information_source:\
+> As before, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.
 
-This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge. And if someone else wants to contribute to your work, how can they send you their additions?
+This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge? And if someone else wants to contribute to your work, how can they send you their additions?
 
 For that we'll need something extra...
 
 ---
 
 ## <img src=./img/github_icon.png width="100" /> Section 2: Github
+
+Github is a cloud-based version control tool. It combines with Git to give you super-powered control over your code, from anywhere on the planet.
+
+With GitHub, you can upload your Git repositories to the internet, share them with whomever you want, and choose who is allowed to make changes to them.
+
+Today we will just cover the basics, but later on down the line we will come back and expand our powers.
+
+---
+
+### 2.1 ⏫ Uploading A Repo ⏫
+
+Right now we have a repository on our machine that we want to get onto GitHub. We'll look at how to do that first. Then later on we will show you how to get a repo from GitHub onto your local machine.
+
+<details>
+
+<summary>
+
+#### Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️
+
+</summary>
+
+---
+
+Head to [GitHub](https://github.com/). You may need to log into your account for this.
+
+> :exclamation: **IMPORTANT** :exclamation:\
+> If you haven't set one a GitHub account yet, now is the time! Then, after class you should check the [student handbook]() for information on how to get set up with a GitHub Student account. You'll need one later in the course!
+
+Oh the main homepage you'll find a `New` button in the left hand pane like so:
+
+![The New Repo button on GitHub](./img/new_repo_button.png)
+
+Give it a click, and assign your repository a useful name. I recommend `"intro_to_git"`. 
+
+> :stop_sign: **CAUTION** :stop_sign:\
+> You can add a description if you want, but you should leave the rest of the form blank for now. We will be uploading content from our computer, so we don't want to block it with autogenerated content from GitHub.
+
+Here's how your form should look when you submit it:
+
+![The Create Repository form on GitHub](./img/create_repo.png)
+
+---
+
+</details>
+
+```diff
+- Need to add a link to the student handbook when in the section above
+```
+
+<details>
+
+<summary>
+
+#### Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋
+
+</summary>
+
+---
+
+Clicking the `Create Repository` button should redirect you to your new repo. It will be empty for now, so you'll just see a screen with some `"Quick Setup"` tips.
+
+Near the top of the page is a link you can copy. Grab it now - we are about to need it.
+
+![The empty repository screen with the repo link circled.](img/link_to_copy.png)
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
+#### Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗
+
+</summary>
+
+---
+
+The git repository you have on your local machine is called your **"local"** repo. The one on GitHub is called the **"remote"** repo.
+
+We want to establish a link between them so that we can sync up the changes between them.
+
+Jump into the terminal again, and run the following command, pasting the link you just copied from GitHub in the relevant spot:
+
+```bash
+git remote add origin YOUR_PASTED_LINK_HERE
+```
+
+This establishes the link between the repositories. Your local repo now knows that there is a repository on GitHub to match it. 
+
+> :information_source: **NOTE** :information_source:\
+> We told Git that the remote repo should be labelled `"origin"` here because that's considered normal practise, but technically you could call it anything. You'd just need to swap the new name into the command. 
+> 
+> Most of the time `"origin"` is the right choice unless you're doing something complicated.
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
+#### Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️
+
+</summary>
+
+---
+
+Let's send all our changes up to Github, so that it contains a backup of all the work we've done so far. 
+
+The command for that is easy:
+
+```bash
+git push origin main
+```
+
+> :information_source: **NOTE** :information_source:\
+> We specify `main` here, because we are pushing just the main branch. We could push a different branch if we wanted, but we don't have any other branches we care about right now. 
+>
+> We've also named the remote repo we are pushing to - as expected, it's `origin`!
+
+---
+
+</details>
+
+---
+
+### 2.2 ⏳ Pause: Did It Work? ⏳
+Refresh the browser page on GitHub. You should see the readme file that you wrote locally.
+
+You'll note that the Markdown code we created has been tastefully rendered. Nifty!
+
+![The successfully pushed code displayed on GitHub](./img/successfully_pushed.png)
+
+Under the green `<> Code` button, you can see that we've made three commits on this file. (In my case, I made them last week, because I've been working on this lesson for a little while.) 
+
+We can also see from the top left that we are on the `main` branch, and that only one branch has been pushed to this remote repo so far.
+
+If there were more files in the repo we would be able to explore them too, but let's keep things simple for now.
+
+---
+
+### 2.3 🔄 Workflow Moving Forward 🔄
+Once you have established a local repo and hooked it up to GitHub, where do you go from there?
+
+Here's a normal workflow.
+1. Make a new branch to experiment with changes on.
+2. Make incremental commits on the branch until you've completed the modification you set out to make. 
+3. Merge the feature branch into `main` once you're satisfied.
+4. Push your branches to Github often, to make sure they're backed up.
+5. Once one feature is completed, start work on a new one!
+
+---
+
+### 2.3 ⏬ Downloading A Repo ⏬
+Now that we've covered the case where you created the repo on your home machine and needed to back it up on GitHub, let's cover the other alternative.
+
+What if you have a repo on GitHub that you want to copy down onto your local machine? 
+
+Luckily, it's quite easy.
+
+<details>
+
+<summary>
+
+
+
+</summary>
+
+---
+
+
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
+
+
+</summary>
+
+---
+
+
+
+---
+
+</details>
