@@ -1,9 +1,16 @@
+<center>
 
+<img src=./img/logo.png />
 
-<h1><img src=./img/git_icon.png width="100"/> Git and Github <img src=./img/github_icon.png width="100"/></h1>
+<h1><img src=./img/git_icon.png width="100" /> Git and Github <img src=./img/github_icon.png width="100" /></h1>
+
+</center>
+
 This lesson walks you through the basics of what Git is and how to use it. Once we've covered that, we will take a look at Github as well!
 
-- [Section 1: Git](#section-1-git)
+<h2>Table of Contents</h2>
+
+- [  Section 1: Git](#--section-1-git)
   - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
     - [Step 1.1.1 🏡 Go To Your Home Directory 🏡](#step-111--go-to-your-home-directory-)
     - [Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓](#step-112--make-sure-you-have-a-directory-for-your-class-work-)
@@ -34,10 +41,10 @@ This lesson walks you through the basics of what Git is and how to use it. Once 
   - [1.8 ⛙ Merge The Feature Branch Into Main ⛙](#18--merge-the-feature-branch-into-main-)
     - [Step 1.8.1 ⬅️ Check Out The Main Branch ⬅️](#step-181-️-check-out-the-main-branch-️)
     - [Step 1.8.2 ⛙ Merge Away! ⛙](#step-182--merge-away-)
+  - [1.9 ⏳ Pause Again ⏳](#19--pause-again-)
+- [ Section 2: Github](#-section-2-github)
 
-<img src=./img/git_icon.png width="100"/> 
-
-## Section 1: Git
+## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
 
 Git lets us safely try out modifications to code, without losing the version that works. It also allows us to "stitch together" all the best bits from various versions of our software. 
@@ -727,5 +734,22 @@ Here's what you should see:
 
 </details>
 
+### 1.9 ⏳ Pause Again ⏳
 
+Where are we now? What have we done so far?
 
+1. We had some code on our main branch.
+1. We split off a feature branch to test some new code.
+1. We liked our new code, so we merged it into the main version.
+
+Here's a diagram representing where we are at:
+
+![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
+
+(As usual, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.)
+
+This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge. And if someone else wants to contribute to your work, how can they send you their additions?
+
+For that we'll need something extra...
+
+## <img src=./img/github_icon.png width="100" /> Section 2: Github
