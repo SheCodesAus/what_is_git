@@ -10,6 +10,8 @@ This lesson walks you through the basics of what Git is and how to use it. Once 
     - [1.1.3 - Navigate Into Your Classwork Directory](#113---navigate-into-your-classwork-directory)
     - [1.1.4 - Create A Directory For Today's Work](#114---create-a-directory-for-todays-work)
   - [1.2 - Initialisation](#12---initialisation)
+    - [1.2.1 - Initialise The Directory As A Git Repo](#121---initialise-the-directory-as-a-git-repo)
+    - [1.2.2 - Inspecting Our New Git Repo](#122---inspecting-our-new-git-repo)
   - [1.3 - The Initial Commit](#13---the-initial-commit)
     - [1.3.1 - Create A Blank File](#131---create-a-blank-file)
     - [1.3.2 - Check The Status](#132---check-the-status)
@@ -20,7 +22,7 @@ This lesson walks you through the basics of what Git is and how to use it. Once 
     - [1.4.1 - Check The Status Again](#141---check-the-status-again)
     - [1.4.2 - Add To Staging Again](#142---add-to-staging-again)
     - [1.4.3 - Make That Commit!](#143---make-that-commit)
-  - [1.5 - Taking Stock](#15---taking-stock)
+  - [1.5 - A Pause To Take Stock](#15---a-pause-to-take-stock)
   - [1.6 - Create A Feature Branch](#16---create-a-feature-branch)
     - [1.6.1 - Create The New Branch](#161---create-the-new-branch)
     - [1.6.2 - Take A Look At The Current Branches](#162---take-a-look-at-the-current-branches)
@@ -44,9 +46,15 @@ This might sound a bit abstract, so let's work through an example together.
 ### 1.1 - Some Housekeeping
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
----
+<details>
+
+<summary>
 
 #### 1.1.1 - Go To Your Home Directory
+
+</summary>
+
+---
 
 Open the terminal, and issue the following command:
 
@@ -54,16 +62,26 @@ Open the terminal, and issue the following command:
 cd ~
 ```
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
 
 ---
 
+</details>
+
+<details>
+
+<summary>
+
 #### 1.1.2 - Make Sure You Have A Directory For Your Class Work
 
-Now enter this command:
+</summary>
+
+---
+
+Enter this command:
 
 ```bash
 ls
@@ -71,7 +89,7 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-> [!IMPORTANT]  
+> :exclamation: **IMPORTANT** :exclamation:\
 > If you don't see one, you can create it now with:
 >
 > ```bash
@@ -80,7 +98,19 @@ This will print the contents of your home directory on the screen. You should se
 
 ---
 
+
+</details>
+
+
+<details>
+
+<summary>
+
 #### 1.1.3 - Navigate Into Your Classwork Directory
+
+</summary>
+
+---
 
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
 
@@ -90,7 +120,18 @@ cd she_codes
 
 ---
 
+</details>
+
+
+<details>
+
+<summary>
+
 #### 1.1.4 - Create A Directory For Today's Work
+
+</summary>
+
+---
 
 We need a directory to hold our work for this lesson. You can create one and simultaneously navigate into it by entering the following command:
 
@@ -98,7 +139,7 @@ We need a directory to hold our work for this lesson. You can create one and sim
 mkdir git_and_github && cd $_
 ```
 
-> [!Note]  
+> :information_source: **NOTE** :information_source:\
 > `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell. 
 > 
 > So this command says: "create a directory called `git_and_github`, and then immediately change directory into that same folder".
@@ -116,13 +157,26 @@ Ok, we are now ready to begin! What we just did is a good way to begin any class
 
 ---
 
+
+</details>
+
 ### 1.2 - Initialisation
 
 We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. 
 
 This is another good thing to do each time we start work on something new.
 
-To initialise the repo, you can run the following command:
+<details>
+
+<summary>
+
+#### 1.2.1 - Initialise The Directory As A Git Repo
+
+</summary>
+
+---
+
+Run the following command:
 
 ```bash
 git init
@@ -130,13 +184,27 @@ git init
 
 This "initialises" the folder as a Git repo. 
 
-You can check that it worked by listing the contents of the current directory with this command:
+---
+
+</details>
+
+<details>
+
+<summary>
+
+#### 1.2.2 - Inspecting Our New Git Repo
+
+</summary>
+
+---
+
+This step isn't required every time you initialise a new repo, but it's useful this time just to see what that command did. Let's look at the contents of our new repo with this command:
 
 ```bash
 ls -A
 ```
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > The `-A` there is a "flag". It adds optional extra functionality to the command. In this case, we are asking the shell to list ALL of the contents of the current directory, including hidden files and folders.
 
 Here's what you should see:
@@ -145,10 +213,10 @@ Here's what you should see:
 
 Hidden files and directories have names that begin with a dot. We can see that Git has created a hidden directory for us called `.git/`. This directory stores all the files that Git uses for keeping track of changes to our files. We don't need to open it right now - Git will handle it for us.
 
-> [!IMPORTANT]  
+> :stop_sign: **CAUTION** :stop_sign:\
 > We **won't** be working *inside* the `.git/` directory. It is just there to let Git do its thing. We will be creating all of the files and folders we need inside the `git_and_github/` directory, and `.git/` will just sit there alongside them. Watching. Waiting. 👀👀👀
 
-> [!WARNING]  
+> :warning: **WARNING** :warning:\
 > Try to avoid a situation where one Git repo gets created *inside another one*. This can cause some very weird and confusing problems. 
 >
 > **Correct Structure:**  
@@ -173,22 +241,33 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 ---
 
+</details>
+
+
+
 
 ### 1.3 - The Initial Commit
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
 
----
+<details>
+
+<summary>
 
 #### 1.3.1 - Create A Blank File
+
+</summary>
+
+---
+
 Let's create a blank file to be in our initial commit. Run the following command:
 
 ```bash
 touch README.md
 ```
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > The `touch` command creates a new file with the name supplied.
 
 Now open the current directory in VS Code like so:
@@ -203,7 +282,18 @@ Here's what you should see:
 
 ---
 
+</details>
+
+<details>
+
+<summary>
+
 #### 1.3.2 - Check The Status
+
+</summary>
+
+---
+
 We won't be adding any code yet - we'll let our initial commit just contain a blank file. Jump back into the terminal and run the following command:
 
 ```bash
@@ -218,7 +308,18 @@ So, Git can see that we have created a new file in the repository, but it isn't 
 
 ---
 
+</details>
+
+<details>
+
+<summary>
+
 #### 1.3.3 - Add The New File To The "Staging Area"
+
+</summary>
+
+---
+
 To stage changes to a file, we use the `git add` command. Give it a go:
 
 ```bash
@@ -237,14 +338,25 @@ Looking good!
 
 ---
 
+</details>
+
+<details>
+
+<summary>
+
 #### 1.3.4 - Make The Commit
+
+</summary>
+
+---
+
 We are now ready to make our first commit! Here's the command:
 
 ```bash
 git commit -m "initial commit"
 ```
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > The `-m` flag lets us add a "commit message" - a little explanation of what changes are in this commit. The text inside the quotation marks is the message. It's important to supply a message every time - Git will make your life difficult if you don't.
 
 Here's the result of running that command:
@@ -255,9 +367,22 @@ Nice! We have a blank canvas to build on now.
 
 ---
 
+</details>
+
 ### 1.4 - A Second Commit
+Let's make a real change now!
+
+<details>
+
+<summary>
+
 #### 1.4.1 - Adding Some Code
-Let's make a real change now. Go back to VS Code, add some text to `README.md`, and save the file. Here's a suggestion for what you can add:
+
+</summary>
+
+---
+
+Go back to VS Code, add some text to `README.md`, and save the file. Here's a suggestion for what you can add:
 
 ```md
 # Git Demonstration
@@ -270,10 +395,23 @@ Here are some useful commands for Git:
 
 Don't forget to save the file!
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > The code we have added is in a language called "Markdown". It's quite extremely useful, and we will see it again in this course. Luckily, Markdown is so close to normal English that we don't need to be familiar with it to understand what's being said here.
 
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.4.1 - Check The Status Again
+
+</summary>
+
+---
+
 Let's check the status again! 
 
 ```bash
@@ -284,7 +422,20 @@ git status
 
 Our new changes have been noticed by Git, but once again they aren't automatically staged. This is good, because sometimes there will be new changes that we don't want to add to our next commit! In this case, though, we **do** want to include this change in our next commit, so...
 
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.4.2 - Add To Staging Again
+
+</summary>
+
+---
+
 Add that change to staging! Same command as before:
 
 ```bash
@@ -301,8 +452,21 @@ git status
 
 Note that before our staged changes were marked with `new file:`, whereas now they register as `modified:`. Git is savvy!
 
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.4.3 - Make That Commit!
-Ok, let's make our second commit. This time we need to include a different message:
+
+</summary>
+
+---
+
+k, let's make our second commit. This time we need to include a different message:
 
 ```bash
 git commit -m "added some useful hints on how to use Git to the README"
@@ -312,7 +476,9 @@ git commit -m "added some useful hints on how to use Git to the README"
 
 ---
 
-### 1.5 - Taking Stock
+</details>
+
+### 1.5 - A Pause To Take Stock
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
 ![Three commits represented as a graph.](./img/what_is_git_video/7_graph_head.drawio.png)
@@ -333,10 +499,12 @@ Of course, the working tree isn't represented in our command line graph. But the
 
 Not bad!
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you'd like to see a demo of that (plus some other helpful techniques), [take a look at our video on useful Git techniques]().
 
----
+```diff
+- ^^Gonna need to make that video then too...
+```
 
 ### 1.6 - Create A Feature Branch
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
@@ -345,17 +513,39 @@ We've only been operating on the main branch so far. Let's create a new branch t
 
 A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
 
+<details>
+
+<summary>
+
 #### 1.6.1 - Create The New Branch
+
+</summary>
+
+---
+
 Run the following command in the terminal:
 
 ```bash
 git branch my_new_branch
 ```
 
-> [!NOTE]  
+> :information_source: **NOTE** :information_source:\
 > Here `my_new_branch` is the name we are giving to our new branch!
 
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.6.2 - Take A Look At The Current Branches
+
+</summary>
+
+---
+
 Just so we are orientated, let's see what branches we have right now. To do this, you can run this command:
 
 ```bash
@@ -368,7 +558,21 @@ Since we didn't supply the name of a new branch, Git will just list all the curr
 
 The asterisk here indicates that we are currently operating on the `main` branch. If we want to work on our new feature in the other branch, we'll need to change that...
 
+---
+
+</details>
+
+
+<details>
+
+<summary>
+
 #### 1.6.3 - Check Out The New Branch
+
+</summary>
+
+---
+
 When we swap to a different branch in Git, we call it "checking out" the branch. We can do it with the following command:
 
 ```bash
@@ -377,9 +581,22 @@ git checkout my_new_branch
 
 ---
 
+</details>
+
 ### 1.7 - Develop A Feature
+We created this branch to introduce new code into the repo, so let's do it!
+
+<details>
+
+<summary>
+
 #### 1.7.1 - Write The Code
-Hope back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
+
+</summary>
+
+---
+
+Hop back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
 
 Let's change that. Here's a modification to make to the file:
 
@@ -398,7 +615,21 @@ Here are some useful commands for Git:
 + * `git checkout some_branch_name`: moves the HEAD to the most recent commit on the branch called "some_branch_name"
 ```
 
+---
+
+</details>
+
+
+<details>
+
+<summary>
+
 #### 1.7.2 - Stage The Changes
+
+</summary>
+
+---
+
 You can use `git status` to check what files have changed if you'd like. That's a good idea when you've made complex changes or it has been a while since your last commit.
 
 In this case, though, we know exactly what has changed, and there's only one file we need to stage. So let's run that command:
@@ -407,7 +638,20 @@ In this case, though, we know exactly what has changed, and there's only one fil
 git add README.md
 ```
 
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.7.3 - Make The Commit
+
+</summary>
+
+---
+
 This should be getting familiar! Here's that command again, this time with a different commit message:
 
 ```bash
@@ -418,16 +662,29 @@ The state of our branches now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
+> :information_source: **NOTE** :information_source:\
 > We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
 
 ---
 
+</details>
+
+
 ### 1.8 - Merge The Feature Branch Into Main
-Go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
+It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
+
+<details>
+
+<summary>
 
 #### 1.8.1 - Check Out The Main Branch
+
+</summary>
+
+---
+
 To start with, we have to jump back to the `main` branch, since we want to merge our changes into it. 
 
 You can do that with this command:
@@ -436,7 +693,24 @@ You can do that with this command:
 git checkout main
 ```
 
+> :exclamation: **IMPORTANT** :exclamation:\
+> The batch we are **in** is always the batch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
 #### 1.8.2 - Merge Away!
+
+</summary>
+
+---
+
+
 Ok, time to merge. Here's the command for that:
 
 ```bash
@@ -446,4 +720,11 @@ git merge my_new_branch
 Here's what you should see:
 
 ![The result of the merge - the readout says "1 file changed, 7 insertions, 1 deletion".](./img/merge.png)
+
+
+---
+
+</details>
+
+
 
