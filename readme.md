@@ -3,54 +3,55 @@
 <h1><img src=./img/git_icon.png width="100"/> Git and Github <img src=./img/github_icon.png width="100"/></h1>
 This lesson walks you through the basics of what Git is and how to use it. Once we've covered that, we will take a look at Github as well!
 
-- [1 - Git](#1---git)
-  - [1.1 - Some Housekeeping](#11---some-housekeeping)
-    - [1.1.1 - Go To Your Home Directory](#111---go-to-your-home-directory)
-    - [1.1.2 - Make Sure You Have A Directory For Your Class Work](#112---make-sure-you-have-a-directory-for-your-class-work)
-    - [1.1.3 - Navigate Into Your Classwork Directory](#113---navigate-into-your-classwork-directory)
-    - [1.1.4 - Create A Directory For Today's Work](#114---create-a-directory-for-todays-work)
-  - [1.2 - Initialisation](#12---initialisation)
-    - [1.2.1 - Initialise The Directory As A Git Repo](#121---initialise-the-directory-as-a-git-repo)
-    - [1.2.2 - Inspecting Our New Git Repo](#122---inspecting-our-new-git-repo)
-  - [1.3 - The Initial Commit](#13---the-initial-commit)
-    - [1.3.1 - Create A Blank File](#131---create-a-blank-file)
-    - [1.3.2 - Check The Status](#132---check-the-status)
-    - [1.3.3 - Add The New File To The "Staging Area"](#133---add-the-new-file-to-the-staging-area)
-    - [1.3.4 - Make The Commit](#134---make-the-commit)
-  - [1.4 - A Second Commit](#14---a-second-commit)
-    - [1.4.1 - Adding Some Code](#141---adding-some-code)
-    - [1.4.1 - Check The Status Again](#141---check-the-status-again)
-    - [1.4.2 - Add To Staging Again](#142---add-to-staging-again)
-    - [1.4.3 - Make That Commit!](#143---make-that-commit)
-  - [1.5 - A Pause To Take Stock](#15---a-pause-to-take-stock)
-  - [1.6 - Create A Feature Branch](#16---create-a-feature-branch)
-    - [1.6.1 - Create The New Branch](#161---create-the-new-branch)
-    - [1.6.2 - Take A Look At The Current Branches](#162---take-a-look-at-the-current-branches)
-    - [1.6.3 - Check Out The New Branch](#163---check-out-the-new-branch)
-  - [1.7 - Develop A Feature](#17---develop-a-feature)
-    - [1.7.1 - Write The Code](#171---write-the-code)
-    - [1.7.2 - Stage The Changes](#172---stage-the-changes)
-    - [1.7.3 - Make The Commit](#173---make-the-commit)
-  - [1.8 - Merge The Feature Branch Into Main](#18---merge-the-feature-branch-into-main)
-    - [1.8.1 - Check Out The Main Branch](#181---check-out-the-main-branch)
-    - [1.8.2 - Merge Away!](#182---merge-away)
+- [Section 1: Git](#section-1-git)
+  - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
+    - [Step 1.1.1 🏡 Go To Your Home Directory 🏡](#step-111--go-to-your-home-directory-)
+    - [Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓](#step-112--make-sure-you-have-a-directory-for-your-class-work-)
+    - [Step 1.1.3 🧭 Navigate Into Your Classwork Directory 🧭](#step-113--navigate-into-your-classwork-directory-)
+    - [Step 1.1.4 📁 Create A Directory For Today's Work 📁](#step-114--create-a-directory-for-todays-work-)
+  - [1.2 - 🌄 Initialisation 🌄](#12----initialisation-)
+    - [Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️](#step-121-️-initialise-the-directory-as-a-git-repo-️)
+    - [Step 1.2.2 👀 Inspecting Our New Git Repo 👀](#step-122--inspecting-our-new-git-repo-)
+  - [Step 1.3 🌱 The Initial Commit 🌱](#step-13--the-initial-commit-)
+    - [Step 1.3.1 📄 Create A Blank File 📄](#step-131--create-a-blank-file-)
+    - [Step 1.3.2 🕵️ Check The Status 🕵️](#step-132-️-check-the-status-️)
+    - [Step 1.3.3 📥 Add The New File To The "Staging Area" 📥](#step-133--add-the-new-file-to-the-staging-area-)
+    - [Step 1.3.4 💾 Make The Commit 💾](#step-134--make-the-commit-)
+  - [1.4 🪴 A Second Commit 🪴](#14--a-second-commit-)
+    - [Step 1.4.1 📝 Adding Some Code 📝](#step-141--adding-some-code-)
+    - [Step 1.4.1 🕵️ Check The Status Again 🕵️](#step-141-️-check-the-status-again-️)
+    - [Step 1.4.2 📥 Add To Staging Again 📥](#step-142--add-to-staging-again-)
+    - [Step 1.4.3 💾 Make That Commit! 💾](#step-143--make-that-commit-)
+  - [1.5 ⏳ A Pause To Take Stock ⏳](#15--a-pause-to-take-stock-)
+  - [1.6 🌵 Create A Feature Branch 🌵](#16--create-a-feature-branch-)
+    - [Step 1.6.1 🌱 Create The New Branch 🌱](#step-161--create-the-new-branch-)
+    - [Step 1.6.2 🕵️ Take A Look At The Current Branches 🕵️](#step-162-️-take-a-look-at-the-current-branches-️)
+    - [Step 1.6.3 ➡️ Check Out The New Branch ➡️](#step-163-️-check-out-the-new-branch-️)
+  - [1.7 🛠️ Develop A Feature 🛠️](#17-️-develop-a-feature-️)
+    - [Step 1.7.1 📝 Write The Code 📝](#step-171--write-the-code-)
+    - [Step 1.7.2 📥 Stage The Changes 📥](#step-172--stage-the-changes-)
+    - [Step 1.7.3 💾 Make The Commit 💾](#step-173--make-the-commit-)
+  - [1.8 ⛙ Merge The Feature Branch Into Main ⛙](#18--merge-the-feature-branch-into-main-)
+    - [Step 1.8.1 ⬅️ Check Out The Main Branch ⬅️](#step-181-️-check-out-the-main-branch-️)
+    - [Step 1.8.2 ⛙ Merge Away! ⛙](#step-182--merge-away-)
 
+<img src=./img/git_icon.png width="100"/> 
 
-## 1 - Git
+## Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
 
 Git lets us safely try out modifications to code, without losing the version that works. It also allows us to "stitch together" all the best bits from various versions of our software. 
 
 This might sound a bit abstract, so let's work through an example together.
 
-### 1.1 - Some Housekeeping
+### 1.1 🧹 Some Housekeeping 🧹
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
 <details>
 
 <summary>
 
-#### 1.1.1 - Go To Your Home Directory
+#### Step 1.1.1 🏡 Go To Your Home Directory 🏡
 
 </summary>
 
@@ -75,7 +76,7 @@ This command navigates you to your "home" directory. That's the directory set as
 
 <summary>
 
-#### 1.1.2 - Make Sure You Have A Directory For Your Class Work
+#### Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓
 
 </summary>
 
@@ -106,7 +107,7 @@ This will print the contents of your home directory on the screen. You should se
 
 <summary>
 
-#### 1.1.3 - Navigate Into Your Classwork Directory
+#### Step 1.1.3 🧭 Navigate Into Your Classwork Directory 🧭
 
 </summary>
 
@@ -127,7 +128,7 @@ cd she_codes
 
 <summary>
 
-#### 1.1.4 - Create A Directory For Today's Work
+#### Step 1.1.4 📁 Create A Directory For Today's Work 📁
 
 </summary>
 
@@ -160,7 +161,7 @@ Ok, we are now ready to begin! What we just did is a good way to begin any class
 
 </details>
 
-### 1.2 - Initialisation
+### 1.2 - 🌄 Initialisation 🌄
 
 We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. 
 
@@ -170,7 +171,7 @@ This is another good thing to do each time we start work on something new.
 
 <summary>
 
-#### 1.2.1 - Initialise The Directory As A Git Repo
+#### Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️
 
 </summary>
 
@@ -192,7 +193,7 @@ This "initialises" the folder as a Git repo.
 
 <summary>
 
-#### 1.2.2 - Inspecting Our New Git Repo
+#### Step 1.2.2 👀 Inspecting Our New Git Repo 👀
 
 </summary>
 
@@ -246,7 +247,7 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 
 
-### 1.3 - The Initial Commit
+### Step 1.3 🌱 The Initial Commit 🌱
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
@@ -255,7 +256,7 @@ We need to create an initial commit, so that we have a "starting point" to build
 
 <summary>
 
-#### 1.3.1 - Create A Blank File
+#### Step 1.3.1 📄 Create A Blank File 📄
 
 </summary>
 
@@ -288,7 +289,7 @@ Here's what you should see:
 
 <summary>
 
-#### 1.3.2 - Check The Status
+#### Step 1.3.2 🕵️ Check The Status 🕵️
 
 </summary>
 
@@ -314,7 +315,7 @@ So, Git can see that we have created a new file in the repository, but it isn't 
 
 <summary>
 
-#### 1.3.3 - Add The New File To The "Staging Area"
+#### Step 1.3.3 📥 Add The New File To The "Staging Area" 📥
 
 </summary>
 
@@ -344,7 +345,7 @@ Looking good!
 
 <summary>
 
-#### 1.3.4 - Make The Commit
+#### Step 1.3.4 💾 Make The Commit 💾
 
 </summary>
 
@@ -369,14 +370,14 @@ Nice! We have a blank canvas to build on now.
 
 </details>
 
-### 1.4 - A Second Commit
+### 1.4 🪴 A Second Commit 🪴
 Let's make a real change now!
 
 <details>
 
 <summary>
 
-#### 1.4.1 - Adding Some Code
+#### Step 1.4.1 📝 Adding Some Code 📝
 
 </summary>
 
@@ -406,7 +407,7 @@ Don't forget to save the file!
 
 <summary>
 
-#### 1.4.1 - Check The Status Again
+#### Step 1.4.1 🕵️ Check The Status Again 🕵️
 
 </summary>
 
@@ -430,7 +431,7 @@ Our new changes have been noticed by Git, but once again they aren't automatical
 
 <summary>
 
-#### 1.4.2 - Add To Staging Again
+#### Step 1.4.2 📥 Add To Staging Again 📥
 
 </summary>
 
@@ -460,7 +461,7 @@ Note that before our staged changes were marked with `new file:`, whereas now th
 
 <summary>
 
-#### 1.4.3 - Make That Commit!
+#### Step 1.4.3 💾 Make That Commit! 💾
 
 </summary>
 
@@ -478,7 +479,7 @@ git commit -m "added some useful hints on how to use Git to the README"
 
 </details>
 
-### 1.5 - A Pause To Take Stock
+### 1.5 ⏳ A Pause To Take Stock ⏳
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
 ![Three commits represented as a graph.](./img/what_is_git_video/7_graph_head.drawio.png)
@@ -506,7 +507,7 @@ Not bad!
 - ^^Gonna need to make that video then too...
 ```
 
-### 1.6 - Create A Feature Branch
+### 1.6 🌵 Create A Feature Branch 🌵
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
 
 We've only been operating on the main branch so far. Let's create a new branch to hold our new changes. Once we are happy with them, we can merge them in.
@@ -517,7 +518,7 @@ A branch that we create to add new content or functionality to our code is calle
 
 <summary>
 
-#### 1.6.1 - Create The New Branch
+#### Step 1.6.1 🌱 Create The New Branch 🌱
 
 </summary>
 
@@ -540,7 +541,7 @@ git branch my_new_branch
 
 <summary>
 
-#### 1.6.2 - Take A Look At The Current Branches
+#### Step 1.6.2 🕵️ Take A Look At The Current Branches 🕵️
 
 </summary>
 
@@ -567,7 +568,7 @@ The asterisk here indicates that we are currently operating on the `main` branch
 
 <summary>
 
-#### 1.6.3 - Check Out The New Branch
+#### Step 1.6.3 ➡️ Check Out The New Branch ➡️
 
 </summary>
 
@@ -583,14 +584,14 @@ git checkout my_new_branch
 
 </details>
 
-### 1.7 - Develop A Feature
+### 1.7 🛠️ Develop A Feature 🛠️
 We created this branch to introduce new code into the repo, so let's do it!
 
 <details>
 
 <summary>
 
-#### 1.7.1 - Write The Code
+#### Step 1.7.1 📝 Write The Code 📝
 
 </summary>
 
@@ -624,7 +625,7 @@ Here are some useful commands for Git:
 
 <summary>
 
-#### 1.7.2 - Stage The Changes
+#### Step 1.7.2 📥 Stage The Changes 📥
 
 </summary>
 
@@ -646,7 +647,7 @@ git add README.md
 
 <summary>
 
-#### 1.7.3 - Make The Commit
+#### Step 1.7.3 💾 Make The Commit 💾
 
 </summary>
 
@@ -672,14 +673,14 @@ The state of our branches now looks something like this:
 </details>
 
 
-### 1.8 - Merge The Feature Branch Into Main
+### 1.8 ⛙ Merge The Feature Branch Into Main ⛙
 It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
 
 <details>
 
 <summary>
 
-#### 1.8.1 - Check Out The Main Branch
+#### Step 1.8.1 ⬅️ Check Out The Main Branch ⬅️
 
 </summary>
 
@@ -704,7 +705,7 @@ git checkout main
 
 <summary>
 
-#### 1.8.2 - Merge Away!
+#### Step 1.8.2 ⛙ Merge Away! ⛙
 
 </summary>
 
