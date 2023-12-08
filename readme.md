@@ -66,7 +66,8 @@ Don't worry if you're still feeling confused by the end of class - the best way 
     - [Step 2.3.5 🕵️ Look At The Result 🕵️](#step-235-️-look-at-the-result-️)
 - [Section 3: 🔄 Normal Git Practises 🔄](#section-3--normal-git-practises-)
 - [Section 4: 💪 Exercises 💪](#section-4--exercises-)
-  - [4.1](#41)
+  - [Exercise 4.1: Add some more code to your `git_and_github/` repo!](#exercise-41-add-some-more-code-to-your-git_and_github-repo)
+  - [Exercise 4.2: Check That Your Portfolio Page Is Up!](#exercise-42-check-that-your-portfolio-page-is-up)
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -1086,9 +1087,9 @@ You should see your portpolio repo listed in the results!
 Great news! What we've covered so far is enough for you to conduct normal operations with Git. 
 
 > ❓ QUESTION ❓\
-> Should I create repositories locally and then push them to the cloud, or is it better to create a repo on Github first and then clone it down?
+> Should I create repositories locally and then push them to the cloud, or is it better to create a repo on GitHub first and then clone it down?
 
-Either method is fine! If you already have some code locally, you'll need to go with the `push` option. If there's already code on Github that you don't have locally, then you'll need `clone`. But if you're starting from scratch, the choice is yours!
+Either method is fine! If you already have some code locally, you'll need to go with the `push` option. If there's already code on GitHub that you don't have locally, then you'll need `clone`. But if you're starting from scratch, the choice is yours!
 
 > ❓ QUESTION ❓\
 > So how should you work on a project? What does day-to-day workflow look like once you've got a repo set up?
@@ -1112,4 +1113,22 @@ It's common to make mistakes when you're first starting out. The good news is th
 
 ## Section 4: 💪 Exercises 💪
 
-### 4.1  
+### Exercise 4.1: Add some more code to your `git_and_github/` repo!
+We've gone through a few more useful commands since the last commit there. Make a **new feature branch** and add some code to the `README.md` file containing definitions for the commands below. Then **stage** and **commit** the changes, **merge** the branch, and **push** to GitHub! 
+
+- `git remote add origin YOUR_PASTED_LINK_HERE`
+- `git push origin main`
+- `git clone YOUR_LINK_HERE`
+
+Add in any other tips you think would be helpful to have jotted down, too!
+
+### Exercise 4.2: Check That Your Portfolio Page Is Up!
+Because we gave the repo for your portfolio project that special name, it should have been deployed as a website automatically.
+
+You can check by going to:
+
+`https://YOUR_USERNAME_HERE.github.io/`
+
+(Just substitute in your actual GitHub username in the appropriate spot.)
+
+Try making a feature branch to add some text to the `index.html` file, before committing, merging, and pushing. Then go back to your portfolio page and refresh - hopefully the text should appear!
