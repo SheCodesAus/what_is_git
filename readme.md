@@ -22,7 +22,7 @@ Don't worry if you're still feeling confused by the end of class - the best way 
   - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
     - [Step 1.1.1 🏡 Go To Your Home Directory 🏡](#step-111--go-to-your-home-directory-)
     - [Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓](#step-112--make-sure-you-have-a-directory-for-your-class-work-)
-    - [Step 1.1.3 🧭 Navigate Into Your Classwork Directory 🧭](#step-113--navigate-into-your-classwork-directory-)
+    - [Step 1.1.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-113--navigate-into-your-class-work-directory-)
     - [Step 1.1.4 📁 Create A Directory For Today's Work 📁](#step-114--create-a-directory-for-todays-work-)
   - [1.2 - 🌄 Initialisation 🌄](#12----initialisation-)
     - [Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️](#step-121-️-initialise-the-directory-as-a-git-repo-️)
@@ -51,15 +51,22 @@ Don't worry if you're still feeling confused by the end of class - the best way 
     - [Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️](#step-191-️-check-out-the-main-branch-️)
     - [Step 1.9.2 ⛙ Merge Away! ⛙](#step-192--merge-away-)
   - [1.10 ⏳ Pause Pt. 3: The Pausening ⏳](#110--pause-pt-3-the-pausening-)
-- [ Section 2: Github](#-section-2-github)
+- [ Section 2: GitHub](#-section-2-github)
   - [2.1 ⏫ Uploading A Repo ⏫](#21--uploading-a-repo-)
     - [Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️](#step-211-️-create-a-repo-in-the-cloud-️)
     - [Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋](#step-212--copy-the-address-for-your-cloud-repo-)
     - [Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗](#step-213--link-your-local-repo-to-the-remote-)
     - [Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️](#step-214-️-push-your-changes-to-the-remote-️)
   - [2.2 ⏳ Pause: Did It Work? ⏳](#22--pause-did-it-work-)
-  - [2.3 🔄 Workflow Moving Forward 🔄](#23--workflow-moving-forward-)
-  - [2.3 ⏬ Downloading A Repo ⏬](#23--downloading-a-repo-)
+  - [2.3 ⏬ "Cloning Down" A Repo ⏬](#23--cloning-down-a-repo-)
+    - [Step 2.3.1 🌱 Create The Repo 🌱](#step-231--create-the-repo-)
+    - [Step 2.3.2 📋 Copy The Repo Address 📋](#step-232--copy-the-repo-address-)
+    - [Step 2.3.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-233--navigate-into-your-class-work-directory-)
+    - [Step 2.3.4 🧑‍🤝‍🧑 Clone The Repo 🧑‍🤝‍🧑](#step-234--clone-the-repo-)
+    - [Step 2.3.5 🕵️ Look At The Result 🕵️](#step-235-️-look-at-the-result-️)
+- [Section 3: 🔄 Normal Git Practises 🔄](#section-3--normal-git-practises-)
+- [Section 4: 💪 Exercises 💪](#section-4--exercises-)
+  - [4.1](#41)
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -133,7 +140,7 @@ This will print the contents of your home directory on the screen. You should se
 
 <summary>
 
-#### Step 1.1.3 🧭 Navigate Into Your Classwork Directory 🧭
+#### Step 1.1.3 🧭 Navigate Into Your Class Work Directory 🧭
 
 </summary>
 
@@ -496,7 +503,7 @@ Note that before our staged changes were marked with `new file:`, whereas now th
 
 ---
 
-k, let's make our second commit. This time we need to include a different message:
+Ok, let's make our second commit. This time we need to include a different message:
 
 ```bash
 git commit -m "added some useful hints on how to use Git to the README"
@@ -513,7 +520,7 @@ git commit -m "added some useful hints on how to use Git to the README"
 ### 1.5 ⏳ A Pause To Take Stock ⏳
 Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
 
-![Three commits represented as a graph.](./img/what_is_git_video/7_graph_head.drawio.png)
+![Three commits represented as a graph.](./img/graph_head.drawio.png)
 
 We can't get quite such a pretty representation in the terminal, but we can get close. Try running this command:
 
@@ -706,6 +713,9 @@ git commit -m "added some extra examples of git commands to the readme"
 
 We just branched off an "alternate timeline" from our main branch, and added a commit to it. That means that we have two possible states for our repository, and we can flip back and forth between them by swapping branches.
 
+> :bulb: **TIP** :bulb:\
+> You could give that a go now - it's a good way to get an intuitive idea of what branches do. You can use `git checkout main` to jump to your main branch, and `git checkout my_new_branch` to jump back to our feature branch. Take a look at the `README.md` file in each branch - see how the new content we added is only present in the feature branch?
+
 The state of our repo now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
@@ -794,9 +804,9 @@ For that we'll need something extra...
 
 ---
 
-## <img src=./img/github_icon.png width="100" /> Section 2: Github
+## <img src=./img/github_icon.png width="100" /> Section 2: GitHub
 
-Github is a cloud-based version control tool. It combines with Git to give you super-powered control over your code, from anywhere on the planet.
+GitHub is a cloud-based version control tool. It combines with Git to give you super-powered control over your code, from anywhere on the planet.
 
 With GitHub, you can upload your Git repositories to the internet, share them with whomever you want, and choose who is allowed to make changes to them.
 
@@ -841,7 +851,7 @@ Here's how your form should look when you submit it:
 </details>
 
 ```diff
-- Need to add a link to the student handbook when in the section above
+- Need to add a link to the student handbook in the section above when it's complete
 ```
 
 <details>
@@ -905,7 +915,7 @@ This establishes the link between the repositories. Your local repo now knows th
 
 ---
 
-Let's send all our changes up to Github, so that it contains a backup of all the work we've done so far. 
+Let's send all our changes up to GitHub, so that it contains a backup of all the work we've done so far. 
 
 The command for that is easy:
 
@@ -939,19 +949,7 @@ If there were more files in the repo we would be able to explore them too, but l
 
 ---
 
-### 2.3 🔄 Workflow Moving Forward 🔄
-Once you have established a local repo and hooked it up to GitHub, where do you go from there?
-
-Here's a normal workflow.
-1. Make a new branch to experiment with changes on.
-2. Make incremental commits on the branch until you've completed the modification you set out to make. 
-3. Merge the feature branch into `main` once you're satisfied.
-4. Push your branches to Github often, to make sure they're backed up.
-5. Once one feature is completed, start work on a new one!
-
----
-
-### 2.3 ⏬ Downloading A Repo ⏬
+### 2.3 ⏬ "Cloning Down" A Repo ⏬
 Now that we've covered the case where you created the repo on your home machine and needed to back it up on GitHub, let's cover the other alternative.
 
 What if you have a repo on GitHub that you want to copy down onto your local machine? 
@@ -962,13 +960,27 @@ Luckily, it's quite easy.
 
 <summary>
 
-
+#### Step 2.3.1 🌱 Create The Repo 🌱
 
 </summary>
 
 ---
 
+If you're going to download a remote repo from GitHub, we need to have a remote repo on your GitHub profile that doesn't already exists on your local machine. After all, there's no sense downloading something you already have - it would be confusing to have *two*!
 
+Good news: I have just the repo. [Here is a template for your first project submission!](https://github.com/SheCodesAus/plus-portfolio-project-template)
+
+Click the `Use this template` button near the top of the page, and select `Create a new repository`. 
+
+![The "Use this template" button](./img/use_this_template.png)
+
+> :exclamation: **IMPORTANT** :exclamation:\
+> Since we are creating your personal portfolio, There are two crucial settings for this repo:
+> 1. **You need to give your repo a very specific name.** It should be `your_username.github.io`, where `your_username` is replaced by whatever your GitHub username is.
+> 
+>     For example, my username is `Hauteclere`. So I would call my repo `hauteclere.github.io`.
+> 
+> 2.  **You need to select the `Public` visibility option.** If you create a private repo, nobody will be able to see your site!
 
 ---
 
@@ -978,14 +990,126 @@ Luckily, it's quite easy.
 
 <summary>
 
-
+#### Step 2.3.2 📋 Copy The Repo Address 📋
 
 </summary>
 
 ---
 
+Just as before, you should be redirected to the repo page for your new repo, only this time you'll see the starter files we supplied with the template.
 
+Click the `<> Code` button to copy the repo address!
 
 ---
 
 </details>
+
+<details>
+
+<summary>
+
+#### Step 2.3.3 🧭 Navigate Into Your Class Work Directory 🧭
+
+</summary>
+
+---
+
+Jump into your terminal and issue the following command to move back into the repo where all your class work is stored:
+
+```bash
+cd ~/she_codes
+```
+
+You should now be here:
+```
+~/
+|
+├─ she_codes/  <--- You are here
+| |
+| ├─git_and_github/   
+```
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
+#### Step 2.3.4 🧑‍🤝‍🧑 Clone The Repo 🧑‍🤝‍🧑
+
+</summary>
+
+---
+
+We want to tell Git to go look up your portfolio project directory on GitHub and download it to your laptop. Here's the command:
+
+```bash
+git clone YOUR_LINK_HERE
+```
+
+Note that you need to swap in the link you copied in place of `YOUR_LINK_HERE`!
+
+---
+
+</details>
+
+<details>
+
+<summary>
+
+#### Step 2.3.5 🕵️ Look At The Result 🕵️
+
+</summary>
+
+---
+
+Run the following command:
+
+```bash
+ls
+```
+
+You should see your portpolio repo listed in the results!
+
+---
+
+</details>
+
+> :information_source: **NOTE** :information_source:\
+> When you "clone down" a repo like this, it arrives fully initialised and ready to go. You can get started right away on making branches and committing changes!
+
+---
+
+## Section 3: 🔄 Normal Git Practises 🔄
+Great news! What we've covered so far is enough for you to conduct normal operations with Git. 
+
+> :question: QUESTION :question:\
+> Should I create repositories locally and then push them to the cloud, or is it better to create a repo on Github first and then clone it down?
+
+Either method is fine! If you already have some code locally, you'll need to go with the `push` option. If there's already code on Github that you don't have locally, then you'll need `clone`. But if you're starting from scratch, the choice is yours!
+
+> :question: QUESTION :question:\
+> So how should you work on a project? What does day-to-day workflow look like once you've got a repo set up?
+
+Here's a normal workflow. 
+1. Make a new branch to experiment with changes on.
+2. Make incremental commits on the branch until you've completed the modification you set out to make. 
+3. Merge the feature branch into `main` once you're satisfied.
+4. Push your branches to GitHub often, to make sure they're backed up.
+5. Once one feature is completed, start work on a new one!
+
+> :bulb: **TIP** :bulb:\
+> We operate this way because it ensures that the `main` branch is always correct and working. We never end up in a situation where our main version of our code has errors in it, because we always fix errors before we merge them into `main`! 
+> 
+> When you first begin a project it can be tempting to commit straight to main, just to get a few runs on the board. That's fine, since there's nothing to break at that stage. But once you have something functional, you should make sure to use a feature branch when you're working on a new chunk of code.
+
+> :question: QUESTION :question:\
+> What if I run into problems?
+
+It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
+
+## Section 4: 💪 Exercises 💪
+
+### 4.1  
