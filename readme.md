@@ -32,8 +32,8 @@ Don't worry if you're still feeling confused by the end of class - the best way 
   - [4.1 💪 Add some more code to your `git_and_github/` repo! 💪](#41--add-some-more-code-to-your-git_and_github-repo-)
   - [4.2 💪 Check That Your Portfolio Page Is Up! 💪](#42--check-that-your-portfolio-page-is-up-)
 
-
-
+---
+---
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -47,15 +47,7 @@ This might sound a bit abstract, so let's work through an example together.
 ### 1.1 🧹 Some Housekeeping 🧹
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
 
-<details>
-
-<summary>
-
 #### Step 1.1.1 🏡 Go To Your Home Directory 🏡
-
-</summary>
-
----
 
 Open the terminal, and issue the following command:
 
@@ -70,17 +62,7 @@ This command navigates you to your "home" directory. That's the directory set as
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓
-
-</summary>
-
----
 
 Enter this command:
 
@@ -99,19 +81,7 @@ This will print the contents of your home directory on the screen. You should se
 
 ---
 
-
-</details>
-
-
-<details>
-
-<summary>
-
 #### Step 1.1.3 🧭 Navigate Into Your Class Work Directory 🧭
-
-</summary>
-
----
 
 Now that we're certain that your `she_codes` directory exists, navigate into it with this command:
 
@@ -120,19 +90,7 @@ cd she_codes
 ```
 
 ---
-
-</details>
-
-
-<details>
-
-<summary>
-
 #### Step 1.1.4 📁 Create A Directory For Today's Work 📁
-
-</summary>
-
----
 
 We need a directory to hold our work for this lesson. You can create one and simultaneously navigate into it by entering the following command:
 
@@ -157,10 +115,6 @@ You should now be here:
 Ok, we are now ready to begin! What we just did is a good way to begin any class where we work on a new project. Jump to your classword directory, and then make a new folder to hold the code for that project.
 
 ---
-
-
-</details>
-
 ---
 
 ### 1.2 🌄 Initialisation 🌄
@@ -169,16 +123,7 @@ We are going to turn our `git_and_github/` directory into a "Git Repository". Th
 
 This is another good thing to do each time we start work on something new.
 
-<details>
-
-<summary>
-
 #### Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️
-
-</summary>
-
----
-
 Run the following command:
 
 ```bash
@@ -189,18 +134,7 @@ This "initialises" the folder as a Git repo.
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.2.2 👀 Inspecting Our New Git Repo 👀
-
-</summary>
-
----
-
 This step isn't required every time you initialise a new repo, but it's useful this time just to see what that command did. Let's look at the contents of our new repo with this command:
 
 ```bash
@@ -243,9 +177,6 @@ Hidden files and directories have names that begin with a dot. We can see that G
 > ```
 
 ---
-
-</details>
-
 ---
 
 ### 1.3 🌱 The Initial Commit 🌱
@@ -253,15 +184,7 @@ Git handles changes that we make to our files by storing them in "commits". Each
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
 
-<details>
-
-<summary>
-
 #### Step 1.3.1 📄 Create A Blank File 📄
-
-</summary>
-
----
 
 Let's create a blank file to be in our initial commit. Run the following command:
 
@@ -284,18 +207,7 @@ Here's what you should see:
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.3.2 🕵️ Check The Status 🕵️
-
-</summary>
-
----
-
 We won't be adding any code yet - we'll let our initial commit just contain a blank file. Jump back into the terminal and run the following command:
 
 ```bash
@@ -310,17 +222,7 @@ So, Git can see that we have created a new file in the repository, but it isn't 
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.3.3 📥 Add The New File To The "Staging Area" 📥
-
-</summary>
-
----
 
 To stage changes to a file, we use the `git add` command. Give it a go:
 
@@ -340,18 +242,7 @@ Looking good!
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.3.4 💾 Make The Commit 💾
-
-</summary>
-
----
-
 We are now ready to make our first commit! Here's the command:
 
 ```bash
@@ -368,23 +259,12 @@ Here's the result of running that command:
 Nice! We have a blank canvas to build on now. 
 
 ---
-
-</details>
-
 ---
 
 ### 1.4 🪴 A Second Commit 🪴
 Let's make a real change now!
 
-<details>
-
-<summary>
-
 #### Step 1.4.1 📝 Adding Some Code 📝
-
-</summary>
-
----
 
 Go back to VS Code, add some text to `README.md`, and save the file. Here's a suggestion for what you can add:
 
@@ -404,18 +284,7 @@ Don't forget to save the file!
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.4.1 🕵️ Check The Status Again 🕵️
-
-</summary>
-
----
-
 Let's check the status again! 
 
 ```bash
@@ -428,18 +297,7 @@ Our new changes have been noticed by Git, but once again they aren't automatical
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.4.2 📥 Add To Staging Again 📥
-
-</summary>
-
----
-
 Add that change to staging! Same command as before:
 
 ```bash
@@ -458,18 +316,7 @@ Note that before our staged changes were marked with `new file:`, whereas now th
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.4.3 💾 Make That Commit! 💾
-
-</summary>
-
----
-
 Ok, let's make our second commit. This time we need to include a different message:
 
 ```bash
@@ -479,9 +326,6 @@ git commit -m "added some useful hints on how to use Git to the README"
 ![The results of our second Git commit. This time the commit notes that 6 insertions were made.](./img/second_commit.png)
 
 ---
-
-</details>
-
 ---
 
 ### 1.5 ⏳ A Pause To Take Stock ⏳
@@ -513,6 +357,7 @@ Not bad!
 ```
 
 ---
+---
 
 ### 1.6 🌵 Create A Feature Branch 🌵
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
@@ -521,15 +366,7 @@ We've only been operating on the main branch so far. Let's create a new branch t
 
 A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
 
-<details>
-
-<summary>
-
 #### Step 1.6.1 🌱 Create The New Branch 🌱
-
-</summary>
-
----
 
 Run the following command in the terminal:
 
@@ -542,17 +379,7 @@ git branch my_new_branch
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.6.2 🕵️ Take A Look At The Current Branches 🕵️
-
-</summary>
-
----
 
 Just so we are orientated, let's see what branches we have right now. To do this, you can run this command:
 
@@ -567,19 +394,7 @@ Since we didn't supply the name of a new branch, Git will just list all the curr
 The asterisk here indicates that we are currently operating on the `main` branch. If we want to work on our new feature in the other branch, we'll need to change that...
 
 ---
-
-</details>
-
-
-<details>
-
-<summary>
-
 #### Step 1.6.3 ➡️ Check Out The New Branch ➡️
-
-</summary>
-
----
 
 When we swap to a different branch in Git, we call it "checking out" the branch. We can do it with the following command:
 
@@ -588,24 +403,12 @@ git checkout my_new_branch
 ```
 
 ---
-
-</details>
-
 ---
 
 ### 1.7 🛠️ Develop A Feature 🛠️
 We created this branch to introduce new code into the repo, so let's do it!
 
-<details>
-
-<summary>
-
 #### Step 1.7.1 📝 Write The Code 📝
-
-</summary>
-
----
-
 Hop back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
 
 Let's change that. Here's a modification to make to the file:
@@ -628,19 +431,7 @@ Here are some useful commands for Git:
 Make sure you save your work!
 
 ---
-
-</details>
-
-
-<details>
-
-<summary>
-
 #### Step 1.7.2 📥 Stage The Changes 📥
-
-</summary>
-
----
 
 You can use `git status` to check what files have changed if you'd like. That's a good idea when you've made complex changes or it has been a while since your last commit.
 
@@ -652,17 +443,7 @@ git add README.md
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.7.3 💾 Make The Commit 💾
-
-</summary>
-
----
 
 This should be getting familiar! Here's that command again, this time with a different commit message:
 
@@ -671,9 +452,6 @@ git commit -m "added some extra examples of git commands to the readme"
 ```
 
 ---
-
-</details>
-
 ---
 
 ### 1.8 ⏳ Pause Again: What Did We Just Do? ⏳
@@ -693,19 +471,12 @@ The state of our repo now looks something like this:
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
 
 ---
+---
 
 ### 1.9 ⛙ Merge The Feature Branch Into Main ⛙
 It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
 
-<details>
-
-<summary>
-
 #### Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️
-
-</summary>
-
----
 
 To start with, we have to jump back to the `main` branch, since we want to merge our changes into it. 
 
@@ -720,19 +491,7 @@ git checkout main
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 1.9.2 ⛙ Merge Away! ⛙
-
-</summary>
-
----
-
-
 Ok, time to merge. Here's the command for that:
 
 ```bash
@@ -743,11 +502,7 @@ Here's what you should see:
 
 ![The result of the merge - the readout says "1 file changed, 7 insertions, 1 deletion".](./img/merge.png)
 
-
 ---
-
-</details>
-
 ---
 
 ### 1.10 ⏳ Pause Pt. 3: The Pausening ⏳
@@ -770,6 +525,8 @@ This is great. But right now, all of the code is stored on your computer. What h
 For that we'll need something extra...
 
 ---
+---
+---
 
 ## <img src=./img/github_icon.png width="100" /> Section 2: GitHub
 
@@ -785,16 +542,7 @@ Today we will just cover the basics, but later on down the line we will come bac
 
 Right now we have a repository on our machine that we want to get onto GitHub. We'll look at how to do that first. Then later on we will show you how to get a repo from GitHub onto your local machine.
 
-<details>
-
-<summary>
-
 #### Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️
-
-</summary>
-
----
-
 Head to [GitHub](https://github.com/). You may need to log into your account for this.
 
 > :exclamation: **IMPORTANT** :exclamation:\
@@ -815,21 +563,11 @@ Here's how your form should look when you submit it:
 
 ---
 
-</details>
-
 ```diff
 - Need to add a link to the student handbook in the section above when it's complete
 ```
 
-<details>
-
-<summary>
-
 #### Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋
-
-</summary>
-
----
 
 Clicking the `Create Repository` button should redirect you to your new repo. It will be empty for now, so you'll just see a screen with some `"Quick Setup"` tips.
 
@@ -839,18 +577,7 @@ Near the top of the page is a link you can copy. Grab it now - we are about to n
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗
-
-</summary>
-
----
-
 The git repository you have on your local machine is called your **"local"** repo. The one on GitHub is called the **"remote"** repo.
 
 We want to establish a link between them so that we can sync up the changes between them.
@@ -870,18 +597,7 @@ This establishes the link between the repositories. Your local repo now knows th
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️
-
-</summary>
-
----
-
 Let's send all our changes up to GitHub, so that it contains a backup of all the work we've done so far. 
 
 The command for that is easy:
@@ -896,9 +612,6 @@ git push origin main
 > We've also named the remote repo we are pushing to - as expected, it's `origin`!
 
 ---
-
-</details>
-
 ---
 
 ### 2.2 ⏳ Pause: Did It Work? ⏳
@@ -915,6 +628,7 @@ We can also see from the top left that we are on the `main` branch, and that onl
 If there were more files in the repo we would be able to explore them too, but let's keep things simple for now.
 
 ---
+---
 
 ### 2.3 ⏬ "Cloning Down" A Repo ⏬
 Now that we've covered the case where you created the repo on your home machine and needed to back it up on GitHub, let's cover the other alternative.
@@ -923,16 +637,7 @@ What if you have a repo on GitHub that you want to copy down onto your local mac
 
 Luckily, it's quite easy.
 
-<details>
-
-<summary>
-
 #### Step 2.3.1 🌱 Create The Repo 🌱
-
-</summary>
-
----
-
 If you're going to download a remote repo from GitHub, we need to have a remote repo on your GitHub profile that doesn't already exists on your local machine. After all, there's no sense downloading something you already have - it would be confusing to have *two*!
 
 Good news: I have just the repo. [Here is a template for your first project submission!](https://github.com/SheCodesAus/plus-portfolio-project-template)
@@ -951,36 +656,14 @@ Click the `Use this template` button near the top of the page, and select `Creat
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.3.2 📋 Copy The Repo Address 📋
-
-</summary>
-
----
-
 Just as before, you should be redirected to the repo page for your new repo, only this time you'll see the starter files we supplied with the template.
 
 Click the `<> Code` button to copy the repo address!
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.3.3 🧭 Navigate Into Your Class Work Directory 🧭
-
-</summary>
-
----
-
 Jump into your terminal and issue the following command to move back into the repo where all your class work is stored:
 
 ```bash
@@ -998,18 +681,7 @@ You should now be here:
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.3.4 🧑‍🤝‍🧑 Clone The Repo 🧑‍🤝‍🧑
-
-</summary>
-
----
-
 We want to tell Git to go look up your portfolio project directory on GitHub and download it to your laptop. Here's the command:
 
 ```bash
@@ -1020,18 +692,7 @@ Note that you need to swap in the link you copied in place of `YOUR_LINK_HERE`!
 
 ---
 
-</details>
-
-<details>
-
-<summary>
-
 #### Step 2.3.5 🕵️ Look At The Result 🕵️
-
-</summary>
-
----
-
 Run the following command:
 
 ```bash
@@ -1040,13 +701,11 @@ ls
 
 You should see your portpolio repo listed in the results!
 
----
-
-</details>
-
 > :information_source: **NOTE** :information_source:\
 > When you "clone down" a repo like this, it arrives fully initialised and ready to go. You can get started right away on making branches and committing changes!
 
+---
+---
 ---
 
 ## Section 3: Normal Git Practises
@@ -1077,6 +736,10 @@ Here's a normal workflow.
 
 It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
 
+---
+---
+---
+
 ## Section 4: Exercises
 
 ### 4.1 💪 Add some more code to your `git_and_github/` repo! 💪
@@ -1087,6 +750,8 @@ We've gone through a few more useful commands since the last commit there. Make 
 - `git clone YOUR_LINK_HERE`
 
 Add in any other tips you think would be helpful to have jotted down, too!
+
+---
 
 ### 4.2 💪 Check That Your Portfolio Page Is Up! 💪
 Because we gave the repo for your portfolio project that special name, it should have been deployed as a website automatically.
