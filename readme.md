@@ -34,6 +34,7 @@ Don't worry if you're still feeling confused by the end of class - the best way 
 
 ---
 ---
+---
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -43,9 +44,12 @@ Git lets us safely try out modifications to code, without losing the version tha
 This might sound a bit abstract, so let's work through an example together.
 
 ---
+---
 
 ### 1.1 🧹 Some Housekeeping 🧹
 If you followed the instructions in our first ever lesson to the letter, you will have created a conveniently-located folder to hold your classwork. Let's check that it exists now:
+
+---
 
 #### Step 1.1.1 🏡 Go To Your Home Directory 🏡
 
@@ -123,6 +127,8 @@ We are going to turn our `git_and_github/` directory into a "Git Repository". Th
 
 This is another good thing to do each time we start work on something new.
 
+---
+
 #### Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️
 Run the following command:
 
@@ -183,6 +189,8 @@ Hidden files and directories have names that begin with a dot. We can see that G
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
+
+---
 
 #### Step 1.3.1 📄 Create A Blank File 📄
 
@@ -263,6 +271,8 @@ Nice! We have a blank canvas to build on now.
 
 ### 1.4 🪴 A Second Commit 🪴
 Let's make a real change now!
+
+---
 
 #### Step 1.4.1 📝 Adding Some Code 📝
 
@@ -366,6 +376,8 @@ We've only been operating on the main branch so far. Let's create a new branch t
 
 A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
 
+---
+
 #### Step 1.6.1 🌱 Create The New Branch 🌱
 
 Run the following command in the terminal:
@@ -394,6 +406,7 @@ Since we didn't supply the name of a new branch, Git will just list all the curr
 The asterisk here indicates that we are currently operating on the `main` branch. If we want to work on our new feature in the other branch, we'll need to change that...
 
 ---
+
 #### Step 1.6.3 ➡️ Check Out The New Branch ➡️
 
 When we swap to a different branch in Git, we call it "checking out" the branch. We can do it with the following command:
@@ -407,6 +420,8 @@ git checkout my_new_branch
 
 ### 1.7 🛠️ Develop A Feature 🛠️
 We created this branch to introduce new code into the repo, so let's do it!
+
+---
 
 #### Step 1.7.1 📝 Write The Code 📝
 Hop back over to VS Code. You should see the same contents in the `README.md` file as you did before, since right now our two branches are identical to one another. 
@@ -431,6 +446,7 @@ Here are some useful commands for Git:
 Make sure you save your work!
 
 ---
+
 #### Step 1.7.2 📥 Stage The Changes 📥
 
 You can use `git status` to check what files have changed if you'd like. That's a good idea when you've made complex changes or it has been a while since your last commit.
@@ -475,6 +491,8 @@ The state of our repo now looks something like this:
 
 ### 1.9 ⛙ Merge The Feature Branch Into Main ⛙
 It's go time! Our "feature" is complete, and we are happy with how it looks, so let's merge it into the "canonical" version of our code - the `main` branch.
+
+---
 
 #### Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️
 
@@ -537,10 +555,13 @@ With GitHub, you can upload your Git repositories to the internet, share them wi
 Today we will just cover the basics, but later on down the line we will come back and expand our powers.
 
 ---
+---
 
 ### 2.1 ⏫ Uploading A Repo ⏫
 
 Right now we have a repository on our machine that we want to get onto GitHub. We'll look at how to do that first. Then later on we will show you how to get a repo from GitHub onto your local machine.
+
+---
 
 #### Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️
 Head to [GitHub](https://github.com/). You may need to log into your account for this.
@@ -561,11 +582,11 @@ Here's how your form should look when you submit it:
 
 ![The Create Repository form on GitHub](./img/create_repo.png)
 
----
-
 ```diff
 - Need to add a link to the student handbook in the section above when it's complete
 ```
+
+---
 
 #### Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋
 
@@ -636,6 +657,8 @@ Now that we've covered the case where you created the repo on your home machine 
 What if you have a repo on GitHub that you want to copy down onto your local machine? 
 
 Luckily, it's quite easy.
+
+---
 
 #### Step 2.3.1 🌱 Create The Repo 🌱
 If you're going to download a remote repo from GitHub, we need to have a remote repo on your GitHub profile that doesn't already exists on your local machine. After all, there's no sense downloading something you already have - it would be confusing to have *two*!
@@ -751,6 +774,7 @@ We've gone through a few more useful commands since the last commit there. Make 
 
 Add in any other tips you think would be helpful to have jotted down, too!
 
+---
 ---
 
 ### 4.2 💪 Check That Your Portfolio Page Is Up! 💪
