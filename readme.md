@@ -1,10 +1,6 @@
-<center>
-
 <img src=./img/logo.png />
 
 <h1><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /></h1>
-
-</center>
 
 Hopefully you've already taken a look at [our introductory video on Git and GitHub](). (If you haven't, have a watch after class!)
 
@@ -20,54 +16,26 @@ Don't worry if you're still feeling confused by the end of class - the best way 
 
 - [  Section 1: Git](#--section-1-git)
   - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
-    - [Step 1.1.1 🏡 Go To Your Home Directory 🏡](#step-111--go-to-your-home-directory-)
-    - [Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓](#step-112--make-sure-you-have-a-directory-for-your-class-work-)
-    - [Step 1.1.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-113--navigate-into-your-class-work-directory-)
-    - [Step 1.1.4 📁 Create A Directory For Today's Work 📁](#step-114--create-a-directory-for-todays-work-)
-  - [1.2 - 🌄 Initialisation 🌄](#12----initialisation-)
-    - [Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️](#step-121-️-initialise-the-directory-as-a-git-repo-️)
-    - [Step 1.2.2 👀 Inspecting Our New Git Repo 👀](#step-122--inspecting-our-new-git-repo-)
-  - [Step 1.3 🌱 The Initial Commit 🌱](#step-13--the-initial-commit-)
-    - [Step 1.3.1 📄 Create A Blank File 📄](#step-131--create-a-blank-file-)
-    - [Step 1.3.2 🕵️ Check The Status 🕵️](#step-132-️-check-the-status-️)
-    - [Step 1.3.3 📥 Add The New File To The "Staging Area" 📥](#step-133--add-the-new-file-to-the-staging-area-)
-    - [Step 1.3.4 💾 Make The Commit 💾](#step-134--make-the-commit-)
+  - [1.2 🌄 Initialisation 🌄](#12--initialisation-)
+  - [1.3 🌱 The Initial Commit 🌱](#13--the-initial-commit-)
   - [1.4 🪴 A Second Commit 🪴](#14--a-second-commit-)
-    - [Step 1.4.1 📝 Adding Some Code 📝](#step-141--adding-some-code-)
-    - [Step 1.4.1 🕵️ Check The Status Again 🕵️](#step-141-️-check-the-status-again-️)
-    - [Step 1.4.2 📥 Add To Staging Again 📥](#step-142--add-to-staging-again-)
-    - [Step 1.4.3 💾 Make That Commit! 💾](#step-143--make-that-commit-)
   - [1.5 ⏳ A Pause To Take Stock ⏳](#15--a-pause-to-take-stock-)
   - [1.6 🌵 Create A Feature Branch 🌵](#16--create-a-feature-branch-)
-    - [Step 1.6.1 🌱 Create The New Branch 🌱](#step-161--create-the-new-branch-)
-    - [Step 1.6.2 🕵️ Take A Look At The Current Branches 🕵️](#step-162-️-take-a-look-at-the-current-branches-️)
-    - [Step 1.6.3 ➡️ Check Out The New Branch ➡️](#step-163-️-check-out-the-new-branch-️)
   - [1.7 🛠️ Develop A Feature 🛠️](#17-️-develop-a-feature-️)
-    - [Step 1.7.1 📝 Write The Code 📝](#step-171--write-the-code-)
-    - [Step 1.7.2 📥 Stage The Changes 📥](#step-172--stage-the-changes-)
-    - [Step 1.7.3 💾 Make The Commit 💾](#step-173--make-the-commit-)
   - [1.8 ⏳ Pause Again: What Did We Just Do? ⏳](#18--pause-again-what-did-we-just-do-)
   - [1.9 ⛙ Merge The Feature Branch Into Main ⛙](#19--merge-the-feature-branch-into-main-)
-    - [Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️](#step-191-️-check-out-the-main-branch-️)
-    - [Step 1.9.2 ⛙ Merge Away! ⛙](#step-192--merge-away-)
   - [1.10 ⏳ Pause Pt. 3: The Pausening ⏳](#110--pause-pt-3-the-pausening-)
 - [ Section 2: GitHub](#-section-2-github)
   - [2.1 ⏫ Uploading A Repo ⏫](#21--uploading-a-repo-)
-    - [Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️](#step-211-️-create-a-repo-in-the-cloud-️)
-    - [Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋](#step-212--copy-the-address-for-your-cloud-repo-)
-    - [Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗](#step-213--link-your-local-repo-to-the-remote-)
-    - [Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️](#step-214-️-push-your-changes-to-the-remote-️)
   - [2.2 ⏳ Pause: Did It Work? ⏳](#22--pause-did-it-work-)
   - [2.3 ⏬ "Cloning Down" A Repo ⏬](#23--cloning-down-a-repo-)
-    - [Step 2.3.1 🌱 Create The Repo 🌱](#step-231--create-the-repo-)
-    - [Step 2.3.2 📋 Copy The Repo Address 📋](#step-232--copy-the-repo-address-)
-    - [Step 2.3.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-233--navigate-into-your-class-work-directory-)
-    - [Step 2.3.4 🧑‍🤝‍🧑 Clone The Repo 🧑‍🤝‍🧑](#step-234--clone-the-repo-)
-    - [Step 2.3.5 🕵️ Look At The Result 🕵️](#step-235-️-look-at-the-result-️)
-- [Section 3: 🔄 Normal Git Practises 🔄](#section-3--normal-git-practises-)
-- [Section 4: 💪 Exercises 💪](#section-4--exercises-)
-  - [Exercise 4.1: Add some more code to your `git_and_github/` repo!](#exercise-41-add-some-more-code-to-your-git_and_github-repo)
-  - [Exercise 4.2: Check That Your Portfolio Page Is Up!](#exercise-42-check-that-your-portfolio-page-is-up)
+- [Section 3: Normal Git Practises](#section-3-normal-git-practises)
+- [Section 4: Exercises](#section-4-exercises)
+  - [4.1 💪 Add some more code to your `git_and_github/` repo! 💪](#41--add-some-more-code-to-your-git_and_github-repo-)
+  - [4.2 💪 Check That Your Portfolio Page Is Up! 💪](#42--check-that-your-portfolio-page-is-up-)
+
+
+
 
 ## <img src=./img/git_icon.png width="100"/>  Section 1: Git
 Git is a "version control" tool. This means we can use it to keep track of and manage changes that we make to our code. 
@@ -197,7 +165,7 @@ Ok, we are now ready to begin! What we just did is a good way to begin any class
 
 ---
 
-### 1.2 - 🌄 Initialisation 🌄
+### 1.2 🌄 Initialisation 🌄
 
 We are going to turn our `git_and_github/` directory into a "Git Repository". That's what we call a directory that is version controlled with Git. 
 
@@ -282,7 +250,7 @@ Hidden files and directories have names that begin with a dot. We can see that G
 
 ---
 
-### Step 1.3 🌱 The Initial Commit 🌱
+### 1.3 🌱 The Initial Commit 🌱
 Git handles changes that we make to our files by storing them in "commits". Each commit represents a set of changes - a bit like a snapshot of our progress. 
 
 We need to create an initial commit, so that we have a "starting point" to build on for our future changes. 
@@ -1083,7 +1051,7 @@ You should see your portpolio repo listed in the results!
 
 ---
 
-## Section 3: 🔄 Normal Git Practises 🔄
+## Section 3: Normal Git Practises
 Great news! What we've covered so far is enough for you to conduct normal operations with Git. 
 
 > ❓ QUESTION ❓\
@@ -1111,9 +1079,9 @@ Here's a normal workflow.
 
 It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
 
-## Section 4: 💪 Exercises 💪
+## Section 4: Exercises
 
-### Exercise 4.1: Add some more code to your `git_and_github/` repo!
+### 4.1 💪 Add some more code to your `git_and_github/` repo! 💪
 We've gone through a few more useful commands since the last commit there. Make a **new feature branch** and add some code to the `README.md` file containing definitions for the commands below. Then **stage** and **commit** the changes, **merge** the branch, and **push** to GitHub! 
 
 - `git remote add origin YOUR_PASTED_LINK_HERE`
@@ -1122,7 +1090,7 @@ We've gone through a few more useful commands since the last commit there. Make 
 
 Add in any other tips you think would be helpful to have jotted down, too!
 
-### Exercise 4.2: Check That Your Portfolio Page Is Up!
+### 4.2 💪 Check That Your Portfolio Page Is Up! 💪
 Because we gave the repo for your portfolio project that special name, it should have been deployed as a website automatically.
 
 You can check by going to:
