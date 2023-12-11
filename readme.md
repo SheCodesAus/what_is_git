@@ -1,6 +1,4 @@
-<img src=./img/logo.png />
-
-<h1><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /></h1>
+<h1><img src=./img/logo.png width="100" /><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /><img src=./img/logo.png width="100" /></h1>
 
 Hopefully you've already taken a look at [our introductory video on Git and GitHub](). (If you haven't, have a watch after class!)
 
