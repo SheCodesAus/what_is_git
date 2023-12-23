@@ -1,14 +1,8 @@
 <h1><img src=./img/logo.png width="100" /><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /><img src=./img/logo.png width="100" /></h1>
 
-Hopefully you've already taken a look at [our introductory video on Git and GitHub](). (If you haven't, have a watch after class!)
-
 This lesson is a practical introduction to using Git and GitHub. It will give you a chance to use the tools we outlined in the video. 
 
 Don't worry if you're still feeling confused by the end of class - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
-
-```diff
-- need to add a link to the video once it's finished
-```
 
 <h2>Table of Contents</h2>
 
@@ -360,11 +354,7 @@ Of course, the working tree isn't represented in our command line graph. But the
 Not bad!
 
 > :information_source: **NOTE** :information_source:\
-> In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you'd like to see a demo of that (plus some other helpful techniques), [take a look at our video on useful Git techniques]().
-
-```diff
-- ^^Gonna need to make that video then too...
-```
+> In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
 
 ---
 ---
