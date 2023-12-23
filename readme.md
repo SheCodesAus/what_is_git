@@ -53,7 +53,7 @@ Open the terminal, and issue the following command:
 cd ~
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
@@ -70,7 +70,7 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-> :exclamation: **IMPORTANT** :exclamation:\
+> [!IMPORTANT]\
 > If you don't see one, you can create it now with:
 >
 > ```bash
@@ -96,7 +96,7 @@ We need a directory to hold our work for this lesson. You can create one and sim
 mkdir git_and_github && cd $_
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell. 
 > 
 > So this command says: "create a directory called `git_and_github`, and then immediately change directory into that same folder".
@@ -141,7 +141,7 @@ This step isn't required every time you initialise a new repo, but it's useful t
 ls -A
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > The `-A` there is a "flag". It adds optional extra functionality to the command. In this case, we are asking the shell to list ALL of the contents of the current directory, including hidden files and folders.
 
 Here's what you should see:
@@ -150,7 +150,7 @@ Here's what you should see:
 
 Hidden files and directories have names that begin with a dot. We can see that Git has created a hidden directory for us called `.git/`. This directory stores all the files that Git uses for keeping track of changes to our files. We don't need to open it right now - Git will handle it for us.
 
-> :stop_sign: **CAUTION** :stop_sign:\
+> [!CAUTION]\
 > We **won't** be working *inside* the `.git/` directory. It is just there to let Git do its thing. We will be creating all of the files and folders we need inside the `git_and_github/` directory, and `.git/` will just sit there alongside them. Watching. Waiting. 👀👀👀
 
 > :warning: **WARNING** :warning:\
@@ -194,7 +194,7 @@ Let's create a blank file to be in our initial commit. Run the following command
 touch README.md
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > The `touch` command creates a new file with the name supplied.
 
 Now open the current directory in VS Code like so:
@@ -251,7 +251,7 @@ We are now ready to make our first commit! Here's the command:
 git commit -m "initial commit"
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > The `-m` flag lets us add a "commit message" - a little explanation of what changes are in this commit. The text inside the quotation marks is the message. It's important to supply a message every time - Git will make your life difficult if you don't.
 
 Here's the result of running that command:
@@ -283,7 +283,7 @@ Here are some useful commands for Git:
 
 Don't forget to save the file!
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > The code we have added is in a language called "Markdown". It's quite extremely useful, and we will see it again in this course. Luckily, Markdown is so close to normal English that we don't need to be familiar with it to understand what's being said here.
 
 ---
@@ -353,7 +353,7 @@ Of course, the working tree isn't represented in our command line graph. But the
 
 Not bad!
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
 
 ---
@@ -376,7 +376,7 @@ Run the following command in the terminal:
 git branch my_new_branch
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > Here `my_new_branch` is the name we are giving to our new branch!
 
 ---
@@ -464,14 +464,14 @@ git commit -m "added some extra examples of git commands to the readme"
 
 We just branched off an "alternate timeline" from our main branch, and added a commit to it. That means that we have two possible states for our repository, and we can flip back and forth between them by swapping branches.
 
-> :bulb: **TIP** :bulb:\
+> [!TIP]\
 > You could give that a go now - it's a good way to get an intuitive idea of what branches do. You can use `git checkout main` to jump to your main branch, and `git checkout my_new_branch` to jump back to our feature branch. Take a look at the `README.md` file in each branch - see how the new content we added is only present in the feature branch?
 
 The state of our repo now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
@@ -494,7 +494,7 @@ You can do that with this command:
 git checkout main
 ```
 
-> :exclamation: **IMPORTANT** :exclamation:\
+> [!IMPORTANT]\
 > The batch we are **in** is always the batch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
 
 ---
@@ -525,7 +525,7 @@ Here's a diagram representing where we are at:
 
 ![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > As before, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.
 
 This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge? And if someone else wants to contribute to your work, how can they send you their additions?
@@ -556,7 +556,7 @@ Right now we have a repository on our machine that we want to get onto GitHub. W
 #### Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️
 Head to [GitHub](https://github.com/). You may need to log into your account for this.
 
-> :exclamation: **IMPORTANT** :exclamation:\
+> [!IMPORTANT]\
 > If you haven't set one a GitHub account yet, now is the time! Then, after class you should check the [student handbook]() for information on how to get set up with a GitHub Student account. You'll need one later in the course!
 
 Oh the main homepage you'll find a `New` button in the left hand pane like so:
@@ -565,7 +565,7 @@ Oh the main homepage you'll find a `New` button in the left hand pane like so:
 
 Give it a click, and assign your repository a useful name. I recommend `"intro_to_git"`. 
 
-> :stop_sign: **CAUTION** :stop_sign:\
+> [!CAUTION]\
 > You can add a description if you want, but you should leave the rest of the form blank for now. We will be uploading content from our computer, so we don't want to block it with autogenerated content from GitHub.
 
 Here's how your form should look when you submit it:
@@ -601,7 +601,7 @@ git remote add origin YOUR_PASTED_LINK_HERE
 
 This establishes the link between the repositories. Your local repo now knows that there is a repository on GitHub to match it. 
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > We told Git that the remote repo should be labelled `"origin"` here because that's considered normal practise, but technically you could call it anything. You'd just need to swap the new name into the command. 
 > 
 > Most of the time `"origin"` is the right choice unless you're doing something complicated.
@@ -617,7 +617,7 @@ The command for that is easy:
 git push origin main
 ```
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > We specify `main` here, because we are pushing just the main branch. We could push a different branch if we wanted, but we don't have any other branches we care about right now. 
 >
 > We've also named the remote repo we are pushing to - as expected, it's `origin`!
@@ -659,7 +659,7 @@ Click the `Use this template` button near the top of the page, and select `Creat
 
 ![The "Use this template" button](./img/use_this_template.png)
 
-> :exclamation: **IMPORTANT** :exclamation:\
+> [!IMPORTANT]\
 > Since we are creating your personal portfolio, There are two crucial settings for this repo:
 > 1. **You need to give your repo a very specific name.** It should be `your_username.github.io`, where `your_username` is replaced by whatever your GitHub username is.
 > 
@@ -714,7 +714,7 @@ ls
 
 You should see your portpolio repo listed in the results!
 
-> :information_source: **NOTE** :information_source:\
+> [!NOTE]\
 > When you "clone down" a repo like this, it arrives fully initialised and ready to go. You can get started right away on making branches and committing changes!
 
 ---
@@ -739,7 +739,7 @@ Here's a normal workflow.
 4. Push your branches to GitHub often, to make sure they're backed up.
 5. Once one feature is completed, start work on a new one!
 
-> :bulb: **TIP** :bulb:\
+> [!TIP]\
 > We operate this way because it ensures that the `main` branch is always correct and working. We never end up in a situation where our main version of our code has errors in it, because we always fix errors before we merge them into `main`! 
 > 
 > When you first begin a project it can be tempting to commit straight to main, just to get a few runs on the board. That's fine, since there's nothing to break at that stage. But once you have something functional, you should make sure to use a feature branch when you're working on a new chunk of code.
