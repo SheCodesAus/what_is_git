@@ -672,6 +672,10 @@ If you're going to download a remote repo from GitHub, we need to have a remote 
 
 Good news: I have just the repo. [Here is a template for your first project submission!](https://github.com/SheCodesAus/plus-portfolio-project-template)
 
+```diff
+- need to fill out the template here!
+```
+
 Click the `Use this template` button near the top of the page, and select `Create a new repository`. 
 
 ![The "Use this template" button](./img/use_this_template.png)
