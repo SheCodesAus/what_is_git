@@ -1,12 +1,12 @@
 <h1><img src=./img/logo.png width="100" /><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /><img src=./img/logo.png width="100" /></h1>
 
-This lesson is a practical introduction to using Git and GitHub. It will give you a chance to use the tools we outlined in the video. 
+This lesson is a practical introduction to using Git and GitHub. Your mentors will explain these tools in class before you begin this walkthrough. Don't worry if the explanation hasn't clicked yet by the time you begin this practical component - Git is one of those tools that can be tricky to understand until you get your hands dirty.  
 
-Don't worry if you're still feeling confused by the end of class - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
+Even if you're still feeling confused by the end of class, don't fret - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
 
 <h2>Table of Contents</h2>
 
-- [  Section 1: Git](#--section-1-git)
+- [Section 1: Git](#--section-1-git)
   - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
   - [1.2 🌄 Initialisation 🌄](#12--initialisation-)
   - [1.3 🌱 The Initial Commit 🌱](#13--the-initial-commit-)
@@ -17,7 +17,7 @@ Don't worry if you're still feeling confused by the end of class - the best way 
   - [1.8 ⏳ Pause Again: What Did We Just Do? ⏳](#18--pause-again-what-did-we-just-do-)
   - [1.9 ⛙ Merge The Feature Branch Into Main ⛙](#19--merge-the-feature-branch-into-main-)
   - [1.10 ⏳ Pause Pt. 3: The Pausening ⏳](#110--pause-pt-3-the-pausening-)
-- [ Section 2: GitHub](#-section-2-github)
+- [Section 2: GitHub](#-section-2-github)
   - [2.1 ⏫ Uploading A Repo ⏫](#21--uploading-a-repo-)
   - [2.2 ⏳ Pause: Did It Work? ⏳](#22--pause-did-it-work-)
   - [2.3 ⏬ "Cloning Down" A Repo ⏬](#23--cloning-down-a-repo-)
@@ -333,11 +333,26 @@ git commit -m "added some useful hints on how to use Git to the README"
 ---
 
 ### 1.5 ⏳ A Pause To Take Stock ⏳
-Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
+Let's just take a moment to discuss the structure of Git repos. 
+
+Often when we discuss Git we depict our repositories with pretty diagrams like this:
 
 ![Three commits represented as a graph.](./img/graph_head.drawio.png)
+> This diagram shows a repo with three commits (one more that we've made so far in this exercise!) We can see:
+> - an initial commit
+> - a commit where some text was added to a file
+> - a commit where some images were embedded in the text
+>
+> Note that instead of commit messages here, we have a graphical depiction of the file. This isn't something we'd see in the real world, but it's handy to understand what is happening when we make those commits!
 
-We can't get quite such a pretty representation in the terminal, but we can get close. Try running this command:
+> [!IMPORTANT]\
+> The above graph has two important pieces of nomenclature in it: **HEAD**, and **Working Tree**.
+> - The `HEAD` is the name we give to "the commit we are working from right now". Often that will be the most recent commit, but one of Git's superpowers is that we can "turn back time" by shifting the `HEAD` to any previous commit. That lets us look at our files as they were in the past, and even experiment by making different changes in an "alternate timeline". This is incredibly useful for correcting errors! 
+> - The "working tree" is just Git's name for "all of the commits up to and including the `HEAD`". In other words, it is the "current state" of our repo - what you'll see if you open the repo in VS Code. Note that if we move the `HEAD` to a previous commit, then the working tree will change back to how it looked in the past! This means the files in VS Code will revert!
+
+So what does our actual repo look like?
+
+When we are actually working in the terminal, we can't get quite such a pretty representation. But we can get close! Try running this command to get a depiction of our work so far:
 
 ```bash
 git log --graph
@@ -354,7 +369,7 @@ Of course, the working tree isn't represented in our command line graph. But the
 Not bad!
 
 > [!NOTE]\
-> In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
+> We mentioned above that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
 
 ---
 ---
@@ -362,7 +377,9 @@ Not bad!
 ### 1.6 🌵 Create A Feature Branch 🌵
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
 
-We've only been operating on the main branch so far. Let's create a new branch to hold our new changes. Once we are happy with them, we can merge them in.
+As we hinted above, it's possible to split off an "alternate timeline" with Git where we commit experimental changes. This is called "branching". By default we are working on the `main` branch, but we can create a new one any time we want.
+
+Let's create a new branch to hold our new changes. Once we are happy with them, we can "merge" them into the `main` branch, making them official.
 
 A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
 
@@ -472,7 +489,7 @@ The state of our repo now looks something like this:
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
 > [!NOTE]\
-> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
+> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits after the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
 
@@ -495,7 +512,7 @@ git checkout main
 ```
 
 > [!IMPORTANT]\
-> The batch we are **in** is always the batch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
+> The branch we are **in** is always the branch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
 
 ---
 
