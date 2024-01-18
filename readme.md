@@ -489,7 +489,7 @@ The state of our repo now looks something like this:
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
 > [!NOTE]\
-> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits after the one marked with a blue circle here.
+> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch doesn't have any commits after the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
 
