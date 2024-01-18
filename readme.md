@@ -745,10 +745,14 @@ You should see your portpolio repo listed in the results!
 ## Section 3: Normal Git Practises
 Great news! What we've covered so far is enough for you to conduct normal operations with Git. 
 
+---
+
 > **❓ QUESTION ❓**\
 > *Should I create repositories locally and then push them to the cloud, or is it better to create a repo on GitHub first and then clone it down?*
 
 Either method is fine! If you already have some code locally, you'll need to go with the `push` option. If there's already code on GitHub that you don't have locally, then you'll need `clone`. But if you're starting from scratch, the choice is yours!
+
+---
 
 > **❓ QUESTION ❓**\
 > *So how should you work on a project? What does day-to-day workflow look like once you've got a repo set up?*
@@ -765,10 +769,12 @@ Here's a normal workflow.
 > 
 > When you first begin a project it can be tempting to commit straight to main, just to get a few runs on the board. That's fine, since there's nothing to break at that stage. But once you have something functional, you should make sure to use a feature branch when you're working on a new chunk of code.
 
+---
+
 > **❓ QUESTION ❓**\
 > *What if I run into problems?*
 
-It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
+It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The most common kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
 
 ---
 ---
@@ -779,6 +785,7 @@ It's common to make mistakes when you're first starting out. The good news is th
 ### 4.1 💪 Add some more code to your `git_and_github/` repo! 💪
 We've gone through a few more useful commands since the last commit there. Make a **new feature branch** and add some code to the `README.md` file containing definitions for the commands below. Then **stage** and **commit** the changes, **merge** the branch, and **push** to GitHub! 
 
+Here are the commands to add:
 - `git remote add origin YOUR_PASTED_LINK_HERE`
 - `git push origin main`
 - `git clone YOUR_LINK_HERE`
