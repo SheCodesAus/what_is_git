@@ -543,7 +543,7 @@ Here's a diagram representing where we are at:
 ![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
 
 > [!NOTE]\
-> As before, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.
+> As before, we have abstract images instead of real commit messages here. You can take a look in the Git log for a more accurate version, but since it doesn't draw lines in the absence of commits, the dotted line between the blue commit and the merge won't appear.
 
 This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge? And if someone else wants to contribute to your work, how can they send you their additions?
 
