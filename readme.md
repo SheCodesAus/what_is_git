@@ -8,23 +8,55 @@ Don't worry if you're still feeling confused by the end of class - the best way 
 
 - [  Section 1: Git](#--section-1-git)
   - [1.1 🧹 Some Housekeeping 🧹](#11--some-housekeeping-)
+    - [Step 1.1.1 🏡 Go To Your Home Directory 🏡](#step-111--go-to-your-home-directory-)
+    - [Step 1.1.2 🎓 Make Sure You Have A Directory For Your Class Work 🎓](#step-112--make-sure-you-have-a-directory-for-your-class-work-)
+    - [Step 1.1.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-113--navigate-into-your-class-work-directory-)
+    - [Step 1.1.4 📁 Create A Directory For Today's Work 📁](#step-114--create-a-directory-for-todays-work-)
   - [1.2 🌄 Initialisation 🌄](#12--initialisation-)
+    - [Step 1.2.1 🗂️ Initialise The Directory As A Git Repo 🗂️](#step-121-️-initialise-the-directory-as-a-git-repo-️)
+    - [Step 1.2.2 👀 Inspecting Our New Git Repo 👀](#step-122--inspecting-our-new-git-repo-)
   - [1.3 🌱 The Initial Commit 🌱](#13--the-initial-commit-)
+    - [Step 1.3.1 📄 Create A Blank File 📄](#step-131--create-a-blank-file-)
+    - [Step 1.3.2 🕵️ Check The Status 🕵️](#step-132-️-check-the-status-️)
+    - [Step 1.3.3 📥 Add The New File To The "Staging Area" 📥](#step-133--add-the-new-file-to-the-staging-area-)
+    - [Step 1.3.4 💾 Make The Commit 💾](#step-134--make-the-commit-)
   - [1.4 🪴 A Second Commit 🪴](#14--a-second-commit-)
+    - [Step 1.4.1 📝 Adding Some Code 📝](#step-141--adding-some-code-)
+    - [Step 1.4.1 🕵️ Check The Status Again 🕵️](#step-141-️-check-the-status-again-️)
+    - [Step 1.4.2 📥 Add To Staging Again 📥](#step-142--add-to-staging-again-)
+    - [Step 1.4.3 💾 Make That Commit! 💾](#step-143--make-that-commit-)
   - [1.5 ⏳ A Pause To Take Stock ⏳](#15--a-pause-to-take-stock-)
   - [1.6 🌵 Create A Feature Branch 🌵](#16--create-a-feature-branch-)
+    - [Step 1.6.1 🌱 Create The New Branch 🌱](#step-161--create-the-new-branch-)
+    - [Step 1.6.2 🕵️ Take A Look At The Current Branches 🕵️](#step-162-️-take-a-look-at-the-current-branches-️)
+    - [Step 1.6.3 ➡️ Check Out The New Branch ➡️](#step-163-️-check-out-the-new-branch-️)
   - [1.7 🛠️ Develop A Feature 🛠️](#17-️-develop-a-feature-️)
+    - [Step 1.7.1 📝 Write The Code 📝](#step-171--write-the-code-)
+    - [Step 1.7.2 📥 Stage The Changes 📥](#step-172--stage-the-changes-)
+    - [Step 1.7.3 💾 Make The Commit 💾](#step-173--make-the-commit-)
   - [1.8 ⏳ Pause Again: What Did We Just Do? ⏳](#18--pause-again-what-did-we-just-do-)
   - [1.9 ⛙ Merge The Feature Branch Into Main ⛙](#19--merge-the-feature-branch-into-main-)
+    - [Step 1.9.1 ⬅️ Check Out The Main Branch ⬅️](#step-191-️-check-out-the-main-branch-️)
+    - [Step 1.9.2 ⛙ Merge Away! ⛙](#step-192--merge-away-)
   - [1.10 ⏳ Pause Pt. 3: The Pausening ⏳](#110--pause-pt-3-the-pausening-)
 - [ Section 2: GitHub](#-section-2-github)
   - [2.1 ⏫ Uploading A Repo ⏫](#21--uploading-a-repo-)
+    - [Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️](#step-211-️-create-a-repo-in-the-cloud-️)
+    - [Step 2.1.2 📋 Copy The Address For Your Cloud Repo 📋](#step-212--copy-the-address-for-your-cloud-repo-)
+    - [Step 2.1.3 🔗 Link Your Local Repo To The Remote 🔗](#step-213--link-your-local-repo-to-the-remote-)
+    - [Step 2.1.4 ⬆️ "Push" Your Changes To The Remote ⬆️](#step-214-️-push-your-changes-to-the-remote-️)
   - [2.2 ⏳ Pause: Did It Work? ⏳](#22--pause-did-it-work-)
   - [2.3 ⏬ "Cloning Down" A Repo ⏬](#23--cloning-down-a-repo-)
+    - [Step 2.3.1 🌱 Create The Repo 🌱](#step-231--create-the-repo-)
+    - [Step 2.3.2 📋 Copy The Repo Address 📋](#step-232--copy-the-repo-address-)
+    - [Step 2.3.3 🧭 Navigate Into Your Class Work Directory 🧭](#step-233--navigate-into-your-class-work-directory-)
+    - [Step 2.3.4 🧑‍🤝‍🧑 Clone The Repo 🧑‍🤝‍🧑](#step-234--clone-the-repo-)
+    - [Step 2.3.5 🕵️ Look At The Result 🕵️](#step-235-️-look-at-the-result-️)
 - [Section 3: Normal Git Practises](#section-3-normal-git-practises)
 - [Section 4: Exercises](#section-4-exercises)
   - [4.1 💪 Add some more code to your `git_and_github/` repo! 💪](#41--add-some-more-code-to-your-git_and_github-repo-)
   - [4.2 💪 Check That Your Portfolio Page Is Up! 💪](#42--check-that-your-portfolio-page-is-up-)
+  - [4.3 💪 Practise With Git 💪](#43--practise-with-git-)
 
 ---
 ---
@@ -53,7 +85,7 @@ Open the terminal, and issue the following command:
 cd ~
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > That squiggly line is called a "tilde" (pronounced "til-duh"). You can type it by holding `Shift`, and then pressing the button next to the number 1 at the top of your keyboard.
 
 This command navigates you to your "home" directory. That's the directory set aside for your personal files and folders.
@@ -70,7 +102,7 @@ ls
 
 This will print the contents of your home directory on the screen. You should see a directory listed among them called `she_codes/`. 
 
-> [!IMPORTANT]\
+> [!IMPORTANT]  
 > If you don't see one, you can create it now with:
 >
 > ```bash
@@ -96,7 +128,7 @@ We need a directory to hold our work for this lesson. You can create one and sim
 mkdir git_and_github && cd $_
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > `$_` is a little trick to let us avoid typing `git_and_github` twice. It is like saying "use that last value that I gave you again" to the shell. 
 > 
 > So this command says: "create a directory called `git_and_github`, and then immediately change directory into that same folder".
@@ -141,7 +173,7 @@ This step isn't required every time you initialise a new repo, but it's useful t
 ls -A
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > The `-A` there is a "flag". It adds optional extra functionality to the command. In this case, we are asking the shell to list ALL of the contents of the current directory, including hidden files and folders.
 
 Here's what you should see:
@@ -150,10 +182,10 @@ Here's what you should see:
 
 Hidden files and directories have names that begin with a dot. We can see that Git has created a hidden directory for us called `.git/`. This directory stores all the files that Git uses for keeping track of changes to our files. We don't need to open it right now - Git will handle it for us.
 
-> [!CAUTION]\
+> [!CAUTION]  
 > We **won't** be working *inside* the `.git/` directory. It is just there to let Git do its thing. We will be creating all of the files and folders we need inside the `git_and_github/` directory, and `.git/` will just sit there alongside them. Watching. Waiting. 👀👀👀
 
-> [!WARNING]\
+> [!WARNING]  
 > Try to avoid a situation where one Git repo gets created *inside another one*. This can cause some very weird and confusing problems. 
 >
 > **Correct Structure:**  
@@ -194,7 +226,7 @@ Let's create a blank file to be in our initial commit. Run the following command
 touch README.md
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > The `touch` command creates a new file with the name supplied.
 
 Now open the current directory in VS Code like so:
@@ -251,7 +283,7 @@ We are now ready to make our first commit! Here's the command:
 git commit -m "initial commit"
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > The `-m` flag lets us add a "commit message" - a little explanation of what changes are in this commit. The text inside the quotation marks is the message. It's important to supply a message every time - Git will make your life difficult if you don't.
 
 Here's the result of running that command:
@@ -283,7 +315,7 @@ Here are some useful commands for Git:
 
 Don't forget to save the file!
 
-> [!NOTE]\
+> [!NOTE]  
 > The code we have added is in a language called "Markdown". It's quite extremely useful, and we will see it again in this course. Luckily, Markdown is so close to normal English that we don't need to be familiar with it to understand what's being said here.
 
 ---
@@ -353,7 +385,7 @@ Of course, the working tree isn't represented in our command line graph. But the
 
 Not bad!
 
-> [!NOTE]\
+> [!NOTE]  
 > In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
 
 ---
@@ -376,7 +408,7 @@ Run the following command in the terminal:
 git branch my_new_branch
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > Here `my_new_branch` is the name we are giving to our new branch!
 
 ---
@@ -464,14 +496,14 @@ git commit -m "added some extra examples of git commands to the readme"
 
 We just branched off an "alternate timeline" from our main branch, and added a commit to it. That means that we have two possible states for our repository, and we can flip back and forth between them by swapping branches.
 
-> [!TIP]\
+> [!TIP]  
 > You could give that a go now - it's a good way to get an intuitive idea of what branches do. You can use `git checkout main` to jump to your main branch, and `git checkout my_new_branch` to jump back to our feature branch. Take a look at the `README.md` file in each branch - see how the new content we added is only present in the feature branch?
 
 The state of our repo now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
-> [!NOTE]\
+> [!NOTE]  
 > We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
@@ -494,7 +526,7 @@ You can do that with this command:
 git checkout main
 ```
 
-> [!IMPORTANT]\
+> [!IMPORTANT]  
 > The batch we are **in** is always the batch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
 
 ---
@@ -525,7 +557,7 @@ Here's a diagram representing where we are at:
 
 ![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
 
-> [!NOTE]\
+> [!NOTE]  
 > As before, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.
 
 This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge? And if someone else wants to contribute to your work, how can they send you their additions?
@@ -556,7 +588,7 @@ Right now we have a repository on our machine that we want to get onto GitHub. W
 #### Step 2.1.1 🌤️ Create A Repo In The Cloud 🌤️
 Head to [GitHub](https://github.com/). You may need to log into your account for this.
 
-> [!IMPORTANT]\
+> [!IMPORTANT]  
 > If you haven't set one a GitHub account yet, now is the time! Then, after class you should check the [student handbook]() for information on how to get set up with a GitHub Student account. You'll need one later in the course!
 
 Oh the main homepage you'll find a `New` button in the left hand pane like so:
@@ -565,7 +597,7 @@ Oh the main homepage you'll find a `New` button in the left hand pane like so:
 
 Give it a click, and assign your repository a useful name. I recommend `"intro_to_git"`. 
 
-> [!CAUTION]\
+> [!CAUTION]  
 > You can add a description if you want, but you should leave the rest of the form blank for now. We will be uploading content from our computer, so we don't want to block it with autogenerated content from GitHub.
 
 Here's how your form should look when you submit it:
@@ -601,7 +633,7 @@ git remote add origin YOUR_PASTED_LINK_HERE
 
 This establishes the link between the repositories. Your local repo now knows that there is a repository on GitHub to match it. 
 
-> [!NOTE]\
+> [!NOTE]  
 > We told Git that the remote repo should be labelled `"origin"` here because that's considered normal practise, but technically you could call it anything. You'd just need to swap the new name into the command. 
 > 
 > Most of the time `"origin"` is the right choice unless you're doing something complicated.
@@ -617,7 +649,7 @@ The command for that is easy:
 git push origin main
 ```
 
-> [!NOTE]\
+> [!NOTE]  
 > We specify `main` here, because we are pushing just the main branch. We could push a different branch if we wanted, but we don't have any other branches we care about right now. 
 >
 > We've also named the remote repo we are pushing to - as expected, it's `origin`!
@@ -659,7 +691,7 @@ Click the `Use this template` button near the top of the page, and select `Creat
 
 ![The "Use this template" button](./img/use_this_template.png)
 
-> [!IMPORTANT]\
+> [!IMPORTANT]  
 > Since we are creating your personal portfolio, There are two crucial settings for this repo:
 > 1. **You need to give your repo a very specific name.** It should be `your_username.github.io`, where `your_username` is replaced by whatever your GitHub username is.
 > 
@@ -714,7 +746,7 @@ ls
 
 You should see your portpolio repo listed in the results!
 
-> [!NOTE]\
+> [!NOTE]  
 > When you "clone down" a repo like this, it arrives fully initialised and ready to go. You can get started right away on making branches and committing changes!
 
 ---
@@ -739,7 +771,7 @@ Here's a normal workflow.
 4. Push your branches to GitHub often, to make sure they're backed up.
 5. Once one feature is completed, start work on a new one!
 
-> [!TIP]\
+> [!TIP]  
 > We operate this way because it ensures that the `main` branch is always correct and working. We never end up in a situation where our main version of our code has errors in it, because we always fix errors before we merge them into `main`! 
 > 
 > When you first begin a project it can be tempting to commit straight to main, just to get a few runs on the board. That's fine, since there's nothing to break at that stage. But once you have something functional, you should make sure to use a feature branch when you're working on a new chunk of code.
@@ -762,7 +794,7 @@ We've gone through a few more useful commands since the last commit there. Make 
 - `git push origin main`
 - `git clone YOUR_LINK_HERE`
 
-Add in any other tips you think would be helpful to have jotted down, too!
+Add in any other tips you think would be helpful to have jotted down, too! If you're looking for a resource on Git commands, [this website is a good tool for figuring out how to achieve specific Git outcomes](https://git.gaozih.top/).
 
 ---
 ---
@@ -777,3 +809,5 @@ You can check by going to:
 (Just substitute in your actual GitHub username in the appropriate spot.)
 
 Try making a feature branch to add some text to the `index.html` file, before committing, merging, and pushing. Then go back to your portfolio page and refresh - hopefully the text should appear!
+
+### 4.3 💪 Practise With Git 💪
