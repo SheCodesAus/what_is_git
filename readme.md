@@ -1,8 +1,8 @@
 <h1><img src=./img/logo.png width="100" /><img src=./img/git_icon.png width="100" /> Git and GitHub <img src=./img/github_icon.png width="100" /><img src=./img/logo.png width="100" /></h1>
 
-This lesson is a practical introduction to using Git and GitHub. It will give you a chance to use the tools we outlined in the video. 
+This lesson is a practical introduction to using Git and GitHub. Your mentors will explain these tools in class before you begin this walkthrough. Don't worry if the explanation hasn't clicked yet by the time you begin this practical component - Git is one of those tools that can be tricky to understand until you get your hands dirty.  
 
-Don't worry if you're still feeling confused by the end of class - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
+Even if you're still feeling confused by the end of class, don't fret - the best way to get comfortable with these skills is to practise them, and there'll be plenty of opportunity for that throughout this course!
 
 <h2>Table of Contents</h2>
 
@@ -56,7 +56,6 @@ Don't worry if you're still feeling confused by the end of class - the best way 
 - [Section 4: Exercises](#section-4-exercises)
   - [4.1 💪 Add some more code to your `git_and_github/` repo! 💪](#41--add-some-more-code-to-your-git_and_github-repo-)
   - [4.2 💪 Check That Your Portfolio Page Is Up! 💪](#42--check-that-your-portfolio-page-is-up-)
-  - [4.3 💪 Practise With Git 💪](#43--practise-with-git-)
 
 ---
 ---
@@ -365,11 +364,26 @@ git commit -m "added some useful hints on how to use Git to the README"
 ---
 
 ### 1.5 ⏳ A Pause To Take Stock ⏳
-Let's just take a look at what we've done so far. In the pre-work video entitled "What Is Git", you were shown a graph that looked like this, depicting some commits:
+Let's just take a moment to discuss the structure of Git repos. 
+
+Often when we discuss Git we depict our repositories with pretty diagrams like this:
 
 ![Three commits represented as a graph.](./img/graph_head.drawio.png)
+> This diagram shows a repo with three commits (one more that we've made so far in this exercise!) We can see:
+> - an initial commit
+> - a commit where some text was added to a file
+> - a commit where some images were embedded in the text
+>
+> Note that instead of commit messages here, we have a graphical depiction of the file. This isn't something we'd see in the real world, but it's handy to understand what is happening when we make those commits!
 
-We can't get quite such a pretty representation in the terminal, but we can get close. Try running this command:
+> [!IMPORTANT]\
+> The above graph has two important pieces of nomenclature in it: **HEAD**, and **Working Tree**.
+> - The `HEAD` is the name we give to "the commit we are working from right now". Often that will be the most recent commit, but one of Git's superpowers is that we can "turn back time" by shifting the `HEAD` to any previous commit. That lets us look at our files as they were in the past, and even experiment by making different changes in an "alternate timeline". This is incredibly useful for correcting errors! 
+> - The "working tree" is just Git's name for "all of the commits up to and including the `HEAD`". In other words, it is the "current state" of our repo - what you'll see if you open the repo in VS Code. Note that if we move the `HEAD` to a previous commit, then the working tree will change back to how it looked in the past! This means the files in VS Code will revert!
+
+So what does our actual repo look like?
+
+When we are actually working in the terminal, we can't get quite such a pretty representation. But we can get close! Try running this command to get a depiction of our work so far:
 
 ```bash
 git log --graph
@@ -385,8 +399,8 @@ Of course, the working tree isn't represented in our command line graph. But the
 
 Not bad!
 
-> [!NOTE]  
-> In the "What Is Git" video, we mentioned that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
+> [!NOTE]\
+> We mentioned above that Git can be used to revert a previous mistake. We won't be demonstrating that here, because we don't want to get bogged down. If you run into trouble on a project, grab a mentor and ask them how to do a "revert"!
 
 ---
 ---
@@ -394,7 +408,9 @@ Not bad!
 ### 1.6 🌵 Create A Feature Branch 🌵
 We've got some good progress in our repo here. We'd like to add some more, but we don't want to risk breaking what we already have by adding untested new code.
 
-We've only been operating on the main branch so far. Let's create a new branch to hold our new changes. Once we are happy with them, we can merge them in.
+As we hinted above, it's possible to split off an "alternate timeline" with Git where we commit experimental changes. This is called "branching". By default we are working on the `main` branch, but we can create a new one any time we want.
+
+Let's create a new branch to hold our new changes. Once we are happy with them, we can "merge" them into the `main` branch, making them official.
 
 A branch that we create to add new content or functionality to our code is called a "feature branch". In this case the feature that we're adding will just be more text in the `README.md` file, but that's ok! From little things, big things grow.
 
@@ -503,8 +519,8 @@ The state of our repo now looks something like this:
 
 ![A diagram showing the "my_new_branch" branch forking off from the "main" branch.](./img/before_merge.drawio.png)
 
-> [!NOTE]  
-> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch hasn't has any commits since the one marked with a blue circle here.
+> [!NOTE]\
+> We're showing it to you in this format because the Git log graph doesn't draw lines where there are no commits. So it won't show you the forking path, since the `main` branch doesn't have any commits after the one marked with a blue circle here.
 >
 > You can still take a look at the Git graph, it'll just be a bit less helpful.
 
@@ -526,8 +542,8 @@ You can do that with this command:
 git checkout main
 ```
 
-> [!IMPORTANT]  
-> The batch we are **in** is always the batch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
+> [!IMPORTANT]\
+> The branch we are **in** is always the branch that will have changes applied to it in a merge. So, since we want to add the changes *from* `my_new_branch` *to* `main`, we needed to "check out" the main branch before merging!
 
 ---
 
@@ -557,8 +573,8 @@ Here's a diagram representing where we are at:
 
 ![A diagram depicting a feature branch splitting off from `main`, having a new commit added to it, and then merging back in.](./img/merge_diagram.drawio.png)
 
-> [!NOTE]  
-> As before, you can take a look in the Git log, but since it doesn't draw lines that con't have commits in them, the bottom path between our blue commit and the merge won't appear.
+> [!NOTE]\
+> As before, we have abstract images instead of real commit messages here. You can take a look in the Git log for a more accurate version, but since it doesn't draw lines in the absence of commits, the dotted line between the blue commit and the merge won't appear.
 
 This is great. But right now, all of the code is stored on your computer. What happens if you drop your laptop off a bridge? And if someone else wants to contribute to your work, how can they send you their additions?
 
@@ -687,6 +703,10 @@ If you're going to download a remote repo from GitHub, we need to have a remote 
 
 Good news: I have just the repo. [Here is a template for your first project submission!](https://github.com/SheCodesAus/plus-portfolio-project-template)
 
+```diff
+- need to fill out the template here!
+```
+
 Click the `Use this template` button near the top of the page, and select `Create a new repository`. 
 
 ![The "Use this template" button](./img/use_this_template.png)
@@ -756,10 +776,14 @@ You should see your portpolio repo listed in the results!
 ## Section 3: Normal Git Practises
 Great news! What we've covered so far is enough for you to conduct normal operations with Git. 
 
+---
+
 > **❓ QUESTION ❓**\
 > *Should I create repositories locally and then push them to the cloud, or is it better to create a repo on GitHub first and then clone it down?*
 
 Either method is fine! If you already have some code locally, you'll need to go with the `push` option. If there's already code on GitHub that you don't have locally, then you'll need `clone`. But if you're starting from scratch, the choice is yours!
+
+---
 
 > **❓ QUESTION ❓**\
 > *So how should you work on a project? What does day-to-day workflow look like once you've got a repo set up?*
@@ -776,10 +800,12 @@ Here's a normal workflow.
 > 
 > When you first begin a project it can be tempting to commit straight to main, just to get a few runs on the board. That's fine, since there's nothing to break at that stage. But once you have something functional, you should make sure to use a feature branch when you're working on a new chunk of code.
 
+---
+
 > **❓ QUESTION ❓**\
 > *What if I run into problems?*
 
-It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
+It's common to make mistakes when you're first starting out. The good news is that Git makes it hard to accidentally destroy your work. The most common kinds of problems you're likely to encounter are called "merge conflicts", and when those crop up you should grab a mentor and get troubleshooting!
 
 ---
 ---
@@ -790,6 +816,7 @@ It's common to make mistakes when you're first starting out. The good news is th
 ### 4.1 💪 Add some more code to your `git_and_github/` repo! 💪
 We've gone through a few more useful commands since the last commit there. Make a **new feature branch** and add some code to the `README.md` file containing definitions for the commands below. Then **stage** and **commit** the changes, **merge** the branch, and **push** to GitHub! 
 
+Here are the commands to add:
 - `git remote add origin YOUR_PASTED_LINK_HERE`
 - `git push origin main`
 - `git clone YOUR_LINK_HERE`
@@ -809,5 +836,3 @@ You can check by going to:
 (Just substitute in your actual GitHub username in the appropriate spot.)
 
 Try making a feature branch to add some text to the `index.html` file, before committing, merging, and pushing. Then go back to your portfolio page and refresh - hopefully the text should appear!
-
-### 4.3 💪 Practise With Git 💪
